@@ -1,0 +1,573 @@
+.head{
+	height: 224px;
+	width: 100%;
+	border-radius: 16px;
+	padding: 62px 89px 44px;
+	margin-top: 11px;
+	h2{
+		font-weight: normal;
+		font-size: 28px;
+		line-height: 33px;
+		color: $background;
+		margin-bottom: 37px;
+		span{
+			padding: 9px 17px;
+			background: $background;
+			border-radius: 5px;
+			font-weight: bold;
+			font-size: 28px;
+			line-height: 33px;
+			color: #212121;
+			margin-left: 13px;
+		}
+	}
+	a{
+		text-decoration: none;
+		height: 48px;
+		padding: 0 28.46px 0 29px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 8px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 20px;
+		color: $background;
+		transition: all 0.2s;
+		svg{
+			margin-left: 21.42px;
+		}
+		&:hover{
+			border: solid 1px $primary;
+			background: $primary;
+		}
+	}
+}
+.categories{
+	padding-top: 46px;
+	padding-bottom: 34px;
+	h2{
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		color: #000000;
+		margin-bottom: 51px;
+		display: flex;
+		align-items: flex-end;
+		&:after{
+			content: '';
+			height: 1px;
+			background: #e9e9e9;
+			flex: auto;
+			margin-left: 14px;
+			position: relative;
+			top: -5px;
+		}
+	}
+	&__grid{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__item{
+		display: block;
+		width: calc((100% - 40px) / 3);
+		text-decoration: none;
+		position: relative;
+		border: 1px solid #E4E4E4;
+		border-radius: 13px;
+		transition: all 0.2s;
+		padding: 26px 0 0 34px;	
+		height: 143px;
+		margin-bottom: 10px;
+		overflow: hidden;
+		&:hover{
+			box-shadow: 0px 12px 22px rgba(0, 0, 0, 0.06);
+		}
+		&_heated-towe-rails{
+			img{
+				top: 10px;
+				right: 19.17px;
+			}
+		}
+		&_mixers{
+			img{
+				top: 4px;
+				right: 9px;
+			}
+		}
+		&_shower-systems{
+			img{
+				top: 0;
+				right: 0;
+			}
+		}
+		&_baths{
+			img{
+				top: 12px;
+				right: 10.54px;
+			}
+		}
+		&_toilet-bowls{
+			img{
+				top: 0px;
+				right: 0px;
+			}
+		}
+	}
+	&__title{
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+		color: #000000;
+		margin-bottom: 14px;
+		position: relative;
+		z-index: 1;
+	}
+	&__quantity{
+		padding: 8px 16px 7px 15px;
+		display: inline-block;
+		background: #F9F9F9;
+		border-radius: 9px;
+		margin: 0;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 15px;
+		color: #AAAAAA;
+		position: relative;
+		z-index: 1;
+	}
+	img{
+		position: absolute;
+	}
+	&__link{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 23px 0 26px;
+		height: 57px;
+		border: 1px solid #DCDCDC;
+		border-radius: 9px;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: $primary;
+		margin-top: 23px;
+		transition: all 0.2s;
+		svg{
+			margin-left: 34.71px;
+			path{
+				fill: $primary;
+				transition: all 0.2s;
+			}
+		}
+		&:hover{
+			border: solid 1px $primary;
+		}
+	}
+}
+.lowerprice{
+	height: 143px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding-left: 55px;
+	border-radius: 16px;
+	h2{
+		margin: 0;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 28px;
+		color: #262626;
+	}
+}
+.lowerprice-mob{
+	height: 101px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	h2{
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 17px;
+		color: $background;
+		margin: 0;
+	}
+}
+.brands{
+	padding-top: 23px;
+	padding-bottom: 35px;
+	h2{
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		color: #000000;
+		margin-bottom: 46px;
+		display: flex;
+		align-items: flex-end;
+		&:after{
+			content: '';
+			height: 1px;
+			background: #e9e9e9;
+			flex: auto;
+			margin-left: 14px;
+			position: relative;
+			top: -5px;
+		}
+	}
+	&__grid{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item{
+		display: flex;
+		margin-bottom: 51px;
+	}
+	&__symbol{
+		height: 40px;
+		width: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		border: 1px solid #D5D5D5;
+		border-radius: 11px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+		color: $primary;
+		margin-right: 19px;
+	}
+	&__content{
+		ul{
+			list-style: none;
+			margin: 0;
+			li{
+				margin: 0 0 9px;
+				a{
+					text-decoration: none;
+					font-size: 16px;
+					line-height: 19px;
+					color: #8B8B8B;
+					transition: all 0.2s;
+					&:hover{
+						color: $primary;
+					}
+				}
+			}
+		}
+		p{
+			margin: 0;
+			a{
+				text-decoration: none;
+				font-size: 16px;
+				line-height: 19px;
+				color: $primary;
+				border-bottom: 1px dashed $primary;
+				padding-bottom: 4px;
+			}
+		}
+	}
+	&__link{
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 24px 0 26px;
+		height: 57px;
+		border: 1px solid #DCDCDC;
+		border-radius: 9px;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: $primary;
+		width: 203px;
+		transition: all 0.2s;
+		svg{
+			path{
+				fill: $primary;
+				transition: all 0.2s;
+			}
+		}
+		&:hover{
+			border: solid 1px $primary;
+		}
+	}
+}
+
+.brands-mobile{
+	padding-top: 17px;
+	padding-bottom: 0;
+	h2{
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: #000;
+		margin-bottom: 16px;
+	}
+	&__symbols{
+		position: relative;
+		width: 100vw;
+		margin-left: -15px;
+		margin-right: -15px;
+		.slick-prev{
+			background: $background url("data:image/svg+xml,%3Csvg viewBox='0 0 5 9' width='5' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.13.76A.448.448 0 010 .438.43.43 0 01.15.123.481.481 0 01.49 0a.5.5 0 01.332.141L4.87 4.193c.083.083.13.194.13.309a.437.437 0 01-.13.31L.822 8.862a.492.492 0 01-.669.014.436.436 0 01-.024-.632l3.74-3.743L.13.76z' fill='%23000'/%3E%3C/svg%3E") no-repeat center;
+			height: 26px;
+			width: 26px;
+			text-decoration: none;
+			border: none;
+			outline: none;
+			box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+			border-radius: 50%;
+			color: rgba(0,0,0,0);
+			font-size: 0;
+			line-height: 0;
+			transform: rotate(180deg);
+			position: absolute;
+			top: 7px;
+			left: 15px;
+			z-index: 5;
+			&.slick-disabled{
+				display: none !important;
+			}
+		}
+		.slick-next{
+			background: $background url("data:image/svg+xml,%3Csvg viewBox='0 0 5 9' width='5' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.13.76A.448.448 0 010 .438.43.43 0 01.15.123.481.481 0 01.49 0a.5.5 0 01.332.141L4.87 4.193c.083.083.13.194.13.309a.437.437 0 01-.13.31L.822 8.862a.492.492 0 01-.669.014.436.436 0 01-.024-.632l3.74-3.743L.13.76z' fill='%23000'/%3E%3C/svg%3E") no-repeat center;
+			height: 26px;
+			width: 26px;
+			text-decoration: none;
+			border: none;
+			outline: none;
+			box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+			border-radius: 50%;
+			color: rgba(0,0,0,0);
+			font-size: 0;
+			line-height: 0;
+			position: absolute;
+			top: 7px;
+			right: 15px;
+			z-index: 5;
+			&.slick-disabled{
+				display: none !important;
+			}
+		}
+	}
+	&__symbol{
+		height: 40px;
+		width: 40px;
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		border: 1px solid #EFEFEF;
+		border-radius: 9px;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 15px;
+		color: #000000;
+		outline: none;
+		box-shadow: none;
+		margin-right: 10px;
+		&.slick-current{
+			border: solid 1px $primary;
+			background: $primary;
+			color: $background;
+		}
+	}
+	&__brands{
+		margin-top: 13px;
+		padding-top: 9px;
+		padding-bottom: 23px;
+		outline: none;
+		box-shadow: none;
+		ul{
+			list-style: none;
+			display: flex !important;
+			justify-content: space-between;
+			margin: 0;
+			li{
+				margin: 0 0 11px;
+				a{
+					text-decoration: none;
+					font-size: 14px;
+					line-height: 17px;
+					color: #000000;
+				}
+			}
+		}
+	}
+	&__row{
+		position: relative;
+		&:before{
+			content: '';
+			width: 100vw;
+			height: 1px;
+			background: #EEEEEE;
+			position: absolute;
+			top: 13px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: block;
+		}
+		&:after{
+			content: '';
+			width: 100vw;
+			height: 1px;
+			background: #EEEEEE;
+			position: absolute;
+			bottom: 28px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 1200px){
+	.categories{
+		&__title{
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 15px;
+		}
+		&__quantity{
+			font-size: 10px;
+			line-height: 12px;
+		}
+	}
+	.brands{
+		&__item{
+			ul{
+				li{
+					a{
+						font-size: 14px;
+						line-height: 17px;
+					}
+				}
+			}
+			p{
+				a{
+					font-size: 14px;
+					line-height: 17px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 992px){
+	.head-mobile{
+		padding-top: 149px;
+		padding-bottom: 72px;
+		min-height: 100vh;
+		h2{
+			font-weight: normal;
+			font-size: 23px;
+			line-height: 27px;
+			color: $background;
+			margin-bottom: 7px;
+			margin-left: 18px;
+		}
+		p{
+			font-weight: bold;
+			font-size: 41px;
+			line-height: 48px;
+			margin-bottom: 325px;
+			color: $background;
+			margin-left: 18px;
+		}
+		a{
+			width: 190px;
+			text-decoration: none;
+			height: 42px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: $background;
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 15px;
+			color: #000000;
+			border-radius: 7px;
+			margin: 0 auto;
+			svg{
+				margin-left: 13px;
+			}
+		}
+	}
+	.categories{
+		padding-top: 16px;
+		padding-bottom: 8px;
+		h2{
+			display: block;
+			margin-bottom: 17px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			color: #000000;
+			&:after{
+				display: none;
+			}
+		}
+		&__item{
+			width: calc((100% - 12px) / 2);
+			height: 68px;
+			padding-top: 11px;
+			padding-left: 16px;
+			margin-bottom: 7px;
+			border-radius: 8px;
+			&_heated-towe-rails{
+				img{
+					top: 17px;
+					right: 11px;
+				}
+			}
+			&_baths{
+				img{
+					top: 18px;
+					right: 4px;
+				}
+			}
+			&_shower-systems{
+				img{
+					top: 10px;
+					right: 12px;
+				}
+			}
+			&_mixers{
+				img{
+					top: 15px;
+					right: 7px;
+				}
+			}
+			&_toilet-bowls{
+				img{
+					top: 12px;
+					right: 8px;
+				}
+			}
+		}
+		&__title{
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 15px;
+			color: #000000;
+			max-width: 74px;
+			margin-bottom: 0px;
+			hyphens: auto;
+		}
+		&__quantity{
+			font-weight: normal;
+			font-size: 10px;
+			line-height: 12px;
+			margin: 0;
+			color: #AAAAAA;
+			padding: 0;
+			background: none;
+		}
+		&__link{
+			display: none;
+		}
+	}
+}

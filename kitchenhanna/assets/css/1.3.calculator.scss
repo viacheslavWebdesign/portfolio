@@ -1,0 +1,346 @@
+.block-calculator{
+	padding: 69px 0 0;
+	.title{
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 26px;
+		color: $black;
+		margin-bottom: 24px;
+	}
+	.calculator-type{
+		display: flex;
+		margin-bottom: 50px;
+		label{
+			cursor: pointer;
+			outline: none;
+			box-shadow: none;
+			border: none;
+			margin: 0 35px 0 0;
+			display: block;
+			&:last-of-type{
+				margin: 0;
+			}
+			figure{
+				width: 200px;
+				height: 200px;
+				margin: 0 0 23px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid #E3EAEE;
+				transition: all 0.3s;
+				.colorme{
+					transition: all 0.3s;
+				}
+				&:after{
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: 12px;
+					right: 12px;
+					height: 20px;
+					width: 25px;
+					transition: all 0.3s;
+					background: url("data:image/svg+xml,%3Csvg width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.427 8.161L0 9.688 9.119 20 25 1.309 23.748 0 9.118 11.81 1.428 8.161z' fill='%23F6860D'/%3E%3C/svg%3E") no-repeat center / contain;
+					opacity: 0;
+				}
+			}
+			p{
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 18px;
+				color: $black;
+				text-align: center;
+				margin: 0;
+			}
+			&:hover{
+				figure{
+					border: solid 1px $black;
+				}
+			}
+		}
+		input:checked + label{
+			figure{
+				border: solid 1px $orange;
+				.colorme{
+					fill: $orange;
+				}
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.ui-selectmenu-button{
+		margin-bottom: 50px;
+	}
+	.calculator-size{
+		margin-bottom: 60px;
+		display: flex;
+		align-items: center;
+		.calculator-size-item{
+			margin: 0 40px 0 0;
+			align-items: center;
+			display: none;
+			&.visible{
+				display: flex;
+			}
+			&:last-of-type{
+				margin: 0;
+			}
+			label{
+				outline: none;
+				box-shadow: none;
+				border: none;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 18px;
+				display: block;
+				color: $black;
+				margin: 0 15px 0 0;
+			}
+			.input-wrap{
+				border: 1px solid #DAE1E6;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				width: 110px;
+				height: 46px;
+				overflow: hidden;
+				transition: all 0.3s;
+				input{
+					outline: none;
+					box-shadow: none;
+					border: none;
+					display: block;
+					width: 64px;
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 18px;
+					color: $black;
+					padding: 0 10px;
+					-moz-appearance: textfield;
+					&::-webkit-outer-spin-button,
+					&::-webkit-inner-spin-button {
+						-webkit-appearance: none;
+						margin: 0;
+					}
+				}
+				span{
+					padding: 0 12px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 18px;
+					color: $black;
+					height: 100%;
+					border-left: 1px solid #DAE1E6;
+					transition: all 0.3s;
+				}
+				&:hover{
+					border: 1px solid $black;
+					span{
+						border-left: 1px solid $black;
+					}
+				}
+			}
+		}
+	}
+	.price-line{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 32px 0;
+		background: #F0F1F2;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 29px;
+		color: $black;
+		position: relative;
+		margin-bottom: 60px;
+		span{
+			font-weight: 500;
+			line-height: 24px;
+			font-size: 24px;
+			margin-left: 10px;
+		}
+		&:before{
+			content: '';
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			background: $white;
+			z-index: 1;
+			border-radius: 50%;
+		}
+		&:after{
+			content: '';
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translate(50%,-50%);
+			background: $white;
+			z-index: 1;
+			border-radius: 50%;
+		}
+	}
+	.container-wide{
+		background: $orange;
+		padding: 60px 0;
+		.discount-row{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.discount-left{
+				display: flex;
+				align-items: center;
+				p{
+					font-weight: 500;
+					font-size: 28px;
+					line-height: 33px;
+					color: $white;
+					margin: 0 0 0 19px;
+					max-width: 419px;
+				}
+			}
+			.discount-right{
+				display: flex;
+				align-items: center;
+				input{
+					outline: none;
+					box-shadow: none;
+					border: none;
+					border-bottom: 1px solid $white;
+					padding: 0 0 18px;
+					margin: 0;
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 18px;
+					color: $white;
+					display: block;
+					width: 249px;
+					transition: all 0.3s;
+					background: none;
+					&::placeholder{
+						font-weight: normal;
+						font-size: 16px;
+						line-height: 18px;
+						color: $white;
+					}
+				}
+				button{
+					width: 249px;
+					height: 55px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					outline: none;
+					box-shadow: none;
+					border: none;
+					border-radius: 50px;
+					cursor: pointer;
+					text-decoration: none;
+					background: $black;
+					color: $white;
+					text-align: center;
+					transition: all 0.3s;
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 24px;
+					margin-left: 30px;
+					&:hover{
+						background: $white;
+						color: $black;
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-calculator{
+	.block-advantages{
+		padding: 100px 0;
+	}
+}
+
+@media (max-width: 992px){
+	.block-calculator{
+		padding: 45px 0 0;
+		.calculator-type{
+			flex-wrap: wrap;
+			justify-content: space-between;
+			label{
+				width: calc(50% - 15px);
+				margin: 0 0 30px;
+				&:nth-of-type(3), &:nth-of-type(4){
+					margin: 0;
+				}
+				figure{
+					width: 100%;
+					height: 157.5px;
+					&:after{
+						right: 5px;
+						bottom: 5px;
+					}
+				}
+			}
+		}
+		.calculator-size{
+			display: block;
+			.calculator-size-item{
+				margin-bottom: 15px;
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+			}
+		}
+		.price-line{
+			display: block;
+			padding: 32px;
+			text-align: center;
+			margin-bottom: 45px;
+		}
+		.container-wide{
+			padding: 30px 0;
+			.discount-row{
+				display: block;
+				.discount-left{
+					display: block;
+					img{
+						display: none;
+					}
+					p{
+						font-size: 22px;
+						line-height: 28px;
+						margin: 0 0 25px;
+						text-align: center;
+					}
+				}
+				.discount-right{
+					display: block;
+					input{
+						margin: 0 auto 15px;
+					}
+					button{
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+	.page-calculator{
+		.block-advantages{
+			padding: 45px 0;
+		}
+	}
+}

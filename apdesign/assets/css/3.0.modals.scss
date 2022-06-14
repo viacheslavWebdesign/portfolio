@@ -1,0 +1,493 @@
+.connect{
+	position: fixed;
+	z-index: 1000;
+	bottom: 0;
+	right: 24px;
+	&_open{
+		.connect__item{
+			display: flex;
+			&_btn{
+				background: $black;
+				svg{
+					path{
+						fill: $white;
+					}
+				}
+			}
+		}
+	}
+	&__item{
+		height: 66px;
+		width: 66px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $black;
+		margin-bottom: 8px;
+		cursor: pointer;
+		transition: all 0.2s;
+		display: none;
+		&:hover{
+			background: $brown;
+		}
+		&_fourth{
+			svg{
+				width: 33px;
+				height: 31px;
+			}
+		}
+		&_third{
+			svg{
+				width: 21px;
+				height: 37px;
+			}
+		}
+		&_second{
+			svg{
+				width: 32px;
+				height: 28px;
+			}
+		}
+		&_btn{
+			margin-bottom: 0;
+			background: #d4d4d4;
+			display: flex;
+			svg{
+				height: 36px;
+				width: 36px;
+				fill: $black;
+				transition: all 0.2s;
+			}
+			&:hover{
+				background: $brown;
+				svg{
+					fill: $white;
+				}
+			}
+		}
+	}
+}
+
+.btn-go-to-top{
+	height: 104px;
+	width: 104px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: $black;
+	position: fixed;
+	right: 93px;
+	bottom: 93px;
+	z-index: 1000;
+	transition: all 0.2s;
+	svg{
+		width: 63px;
+		height: 63px;
+	}
+	&:hover{
+		background: $brown;
+	}
+	&.isvisible{
+		display: flex;
+	}
+}
+
+.modal-shadow{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2000;
+	background: rgba(0,0,0,.75);
+	cursor: pointer;
+	display: none;
+	&_visible{
+		display: block;
+	}
+}
+
+.modal{
+	display: none;
+	&_visible{
+		display: block;
+	}
+}
+
+.modal_callback{
+	z-index: 2001;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: auto;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.modal{
+		&__body{
+			top: 60px;
+			transform: translateX(-50%);
+			left: 50%;
+			background: $white;
+			padding: 46px 95px 45px;
+			width: 584px;
+			position: absolute;
+		}
+		&__close{
+			position: absolute;
+			top: 29.26px;
+			right: 28.82px;
+			height: 25px;
+			width: 25px;
+			cursor: pointer;
+			transition: all 0.2s;
+			z-index: 2005;
+			&:hover{
+				fill: $black;
+			}
+		}
+		&__title{
+			text-align: center;
+			margin-bottom: 58px;
+			font-weight: 600;
+			font-size: 25px;
+			line-height: 32px;
+		}
+		&__field{
+			position: relative;
+		}
+		&__label{
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 23px;
+			color: $black;
+			display: block;
+			margin-bottom: 19px;
+			letter-spacing: 0.02em;
+		}
+		&__input{
+			display: block;
+			width: 100%;
+			padding: 28px 32px;
+			outline: none;
+			box-shadow: none;
+			border: solid 1px $black;
+			color: $black;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 23px;
+			background: #EEEEEE;
+			margin-bottom: 50px;
+			border-radius: 0;
+			&::placeholder{
+				color: rgba(0, 0, 0, 0.18);
+				font-weight: normal;
+				font-size: 18px;
+				line-height: 23px;
+			}
+			&.error{
+				border: 1px solid #8D4242;
+			}
+		}
+		&__submit{
+			width: 100%;
+			padding: 29px 0;
+			color: $white;
+			background: $black;
+			outline: none;
+			box-shadow: none;
+			border: none;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 23px;
+			margin-top: 20px;
+			letter-spacing: -0.01em;
+			cursor: pointer;
+			transition: all 0.02s;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: -10px;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				background: $black;
+				display: block;
+				opacity: 0;
+				transition: all 0.2s;
+			}
+			&:hover{
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+		&__agreement{
+			margin-top: 5px;
+			label.error{
+				display: none !important;
+			}
+			input{
+				opacity: 0;
+				outline: none;
+				box-shadow: none;
+				border: none;
+				height: 0;
+				width: 0;
+				z-index: -999;
+				line-height: 0;
+				font-size: 0;
+			}
+			input:checked ~ .checkbox-label::after{
+				display: block;
+			}
+			.checkbox-label{
+				font-weight: normal;
+				font-size: 14px;
+				color: $black;
+				margin-left: auto;
+				display: inline-block;
+				margin-left: 32px;
+				line-height: 22px;
+				letter-spacing: 0.02em;
+				position: relative;
+				cursor: pointer;
+				a{
+					text-decoration: none;
+					font-weight: normal;
+					font-size: 14px;
+					color: $black;
+					border-bottom: 1px dashed $black;
+					transition: all 0.2s;
+					&:hover{
+						color: $brown;
+					}
+				}
+				&:before{
+					content: '';
+					height: 21px;
+					width: 21px;
+					border: solid 1px $black;
+					display: block;
+					position: absolute;
+					left: -31px;
+					top: 3px;
+				}
+				&:after{
+					width: 10.28px;
+					height: 8.03px;
+					background: url("data:image/svg+xml,%3Csvg width='12' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.187 1.083L5.429 8.28.907 4.512l.853-1.024 3.477 2.897 4.91-6.134 1.04.832z' fill='%23000'/%3E%3C/svg%3E") no-repeat center / contain;
+					content: '';
+					left: -27.09px;
+					position: absolute;
+					top: 10px;
+					display: none;
+				}
+			}
+		}
+	}
+	label.error{
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: #8d4242;
+		display: block;
+		position: absolute;
+		bottom: -32px;
+		left: 0;
+		letter-spacing: 0.02em;
+	}
+}
+
+.modal-success{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: $white;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	&__icon{
+		width: 270px;
+		height: 170px;
+		display: block;
+		margin-bottom: 33.48px;
+		position: relative;
+		bottom: 2px;
+	}
+	&__title{
+		font-weight: 600;
+		font-size: 51px;
+		line-height: 65px;
+		margin-bottom: 75px;
+		text-align: center;
+		letter-spacing: -0.02em;
+	}
+	&__text{
+		margin: 0;
+		font-weight: normal;
+		font-size: 18px;
+		color: $black;
+		line-height: 28px;
+		text-align: center;
+		position: relative;
+    	bottom: 3px;
+    	letter-spacing: 0.02em;
+	}
+	&_visible{
+		display: flex;
+	}
+}
+
+@media (max-width: 992px){
+	.connect{
+		right: 0;
+		&__item{
+			width: 48.32px;
+			height: 48.32px;
+			margin-bottom: 5.86px;
+			&_fourth{
+				svg{
+					width: 24.16px;
+					height: 22.69px;
+				}
+			}
+			&_third{
+				svg{
+					width: 27.09px;
+					height: 27.09px;
+				}
+			}
+			&_second{
+				svg{
+					width: 27.82px;
+					height: 27.82px;
+				}
+			}
+			&_btn{
+				margin-bottom: 0;
+				svg{
+					width: 26.36px;
+					height: 26.36px;
+				}
+			}
+		}
+	}
+	.btn-go-to-top{
+		display: none;
+		&.isvisible{
+			display: none;
+		}
+	}
+	.modal_callback{
+		.modal{
+			&__body{
+				width: 100%;
+				padding: 30px 24px;
+				top: 0;
+				min-height: 100vh;
+			}
+			&__title{
+				font-weight: 600;
+				font-size: 15px;
+				line-height: 19px;
+				margin-bottom: 41px;
+				letter-spacing: -0.01em;
+			}
+			&__close{
+				fill: $black;
+				height: 16.5px;
+				width: 16.5px;
+				top: 27.3px;
+				right: 21.3px;
+			}
+			&__label{
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 18px;
+				margin-bottom: 11px;
+			}
+			&__input{
+				padding: 19.91px 21.97px 20px;
+				font-size: 11px;
+				line-height: 14px;
+				margin-bottom: 34px;
+				&::placeholder{
+					font-size: 11px;
+					line-height: 14px;
+				}
+			}
+			&__submit{
+				margin-top: 12px;
+				padding: 21px 0 19px;
+				font-weight: 600;
+				font-size: 12px;
+				line-height: 15px;
+				letter-spacing: -0.01em;
+			}
+			&__agreement{
+				margin-top: 16px;
+				.checkbox-label{
+					font-size: 13px;
+					line-height: 23px;
+					width: 235px;
+					margin-left: 24px;
+					a{
+						font-size: 13px;
+					}
+					&:before{
+						height: 14.42px;
+						width: 14.42px;
+						top: 4px;
+						left: -21px;
+					}
+					&:after{
+						width: 7.06px;
+						height: 5.51px;
+						left: -18.09px;
+						top: 9px;
+					}
+				}
+			}
+		}
+		label.error{
+			font-size: 9px;
+			line-height: 11px;
+			bottom: -21px;
+			left: 5px;
+		}
+	}
+	.modal-success{
+		padding-bottom: 91px;
+		padding-top: 40px;
+		&__icon{
+			width: 155px;
+			height: 122px;
+			margin-bottom: 29px;
+			bottom: -4px;
+		}
+		&__title{
+			font-weight: 600;
+			font-size: 31px;
+			line-height: 40px;
+			margin-bottom: 32px;
+			position: relative;
+			bottom: -5px;
+		}
+		&__text{
+			font-weight: normal;
+			font-size: 13px;
+			bottom: -2px;
+			line-height: 22px;
+		}
+	}
+}

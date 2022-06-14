@@ -1,0 +1,24 @@
+.examples{
+	&_page{
+		padding-top: 54px;
+		padding-bottom: 71px;
+		.examples__title{
+			margin-bottom: 86px;
+		}
+	}
+}
+
+@media (max-width: 992px){
+	.examples{
+		&_page{
+			padding-top: 24px;
+			padding-bottom: 34px;
+			.examples__title{
+				margin-bottom: 28px;
+			}
+			.examples-row__loader{
+				margin: 23px auto 15px;
+			}
+		}
+	}
+}

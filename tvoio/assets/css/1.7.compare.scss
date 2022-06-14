@@ -1,0 +1,416 @@
+.compare{
+	padding-top: 25px;
+	padding-bottom: 53px;
+	&__head{
+		display: flex;
+		margin-bottom: 44px;
+		h1{
+			font-weight: 500;
+			font-size: 22px;
+			line-height: 26px;
+			color: #000;
+			margin: 0;
+		}
+		p{
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 17px;
+			color: $primary;
+			margin: 0 0 0 5px;
+		}
+	}
+	aside{
+		width: 163px;
+	}
+	&__body{
+		display: flex;
+	}
+	&__th{
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 20px;
+		margin: 0;
+		color: #9E9E9E;
+		border-bottom: 1px solid #EFEFEF;
+		padding-top: 17px;
+		padding-bottom: 17px;
+	}
+	main{
+		flex: auto;
+		display: flex;
+	}
+	&__item{
+		flex: auto;
+		&:last-of-type{
+			padding-right: 40px;
+		}
+		&:first-of-type{
+			.compare__td{
+				border-left: none;
+			}
+		}
+	}
+	&__td{
+		border-bottom: 1px solid #EFEFEF;
+		padding-top: 17px;
+		padding-bottom: 15px;
+		padding-left: 42px;
+		border-left: 1px solid #EFEFEF;
+		&_title{
+			padding-top: 0;
+			a{
+				text-decoration: none;
+			}
+			p{
+				display: inline;
+				font-weight: normal;
+				font-size: 17px;
+				line-height: 31px;
+				color: #000000;
+				border-bottom: 1px dashed #000;
+				padding-bottom: 2px;
+				transition: all 0.2s;
+				&:hover{
+					color: $primary;
+					border-bottom: 1px dashed $primary;
+				}
+			}
+		}
+		&_image{
+			figure{
+				margin: 0;
+				height: 126px;
+				width: 126px;
+				display: flex;
+				align-items: center;
+				img{
+					display: block;
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+		}
+		&_price{
+			p{
+				margin: 0;
+				font-weight: 500;
+				font-size: 17px;
+				line-height: 20px;
+			}
+		}
+		&_model, &_material, &_manufacturer, &_weight, &_size{
+			padding-bottom: 16px;
+			p{
+				font-weight: normal;
+				font-size: 17px;
+				line-height: 20px;
+				color: #1C1C1C;
+				margin: 0;
+			}
+		}
+		&_actuality{
+			p{
+				font-weight: 500;
+				font-size: 17px;
+				line-height: 20px;
+				color: #47B27F;
+				margin: 0;
+			}
+		}
+	}
+	&__addtocart{
+		width: 221px;
+		height: 46px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		text-decoration: none;
+		outline: none;
+		box-shadow: none;
+		background: $background;
+		border-radius: 4px;
+		border: solid 1px $primary;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		color: $primary;
+		margin: 20px 0 12px 42px;
+		transition: all 0.2s;
+		svg{
+			margin-right: 9.53px;
+			path{
+				fill: $primary;
+			}
+		}
+		&:hover{
+			box-shadow: 0px 9px 12px rgba(255, 92, 0, 0.15);
+			background: $primary;
+			color: $background;
+			svg{
+				path{
+					fill: $background;
+				}
+			}
+		}
+	}
+	&__remove{
+		margin-left: 42px;
+		width: 221px;
+		height: 46px;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		cursor: pointer;
+		text-decoration: none;
+		outline: none;
+		box-shadow: none;
+		border: none;
+		background: $background;
+		border-radius: 4px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		color: $primary;
+		transition: all 0.2s;
+		&:hover{
+			background: #F5F5F5;
+		}
+	}
+	&__th, &__td{
+		&_title{
+			height: 80px;
+		}
+		&_image{
+			height: 161px;
+			display: flex;
+			align-items: center;
+		}
+		&_price{
+			height: 55px;
+		}
+		&_model{
+			height: 54px;
+		}
+		&_material{
+			height: 54px;
+		}
+		&_manufacturer{
+			height: 54px;
+		}
+		&_actuality{
+			height: 55px;
+		}
+		&_weight{
+			height: 55px;
+		}
+		&_size{
+			height: 54px;
+		}
+	}
+}
+@media (max-width: 1450px){
+	.compare{
+		&__item{
+			&:last-of-type{
+				padding-right: 0;
+			}
+		}
+	}
+}
+@media (max-width: 1200px){
+	.compare{
+		&__th{
+			font-weight: normal;
+			font-size: 13px;
+			line-height: 15px;
+			color: #9E9E9E;
+		}
+		&__td{
+			padding-left: 16px;
+			&_title{
+				p{
+					font-weight: normal;
+					font-size: 13px;
+					line-height: 24px;
+				}
+			}
+			&_price{
+				p{
+					font-weight: 500;
+					font-size: 13px;
+					line-height: 15px;
+				}
+			}
+			&_model, &_material, &_manufacturer, &_weight, &_size{
+				p{
+					font-weight: normal;
+					font-size: 13px;
+					line-height: 15px;
+				}
+			}
+			&_actuality{
+				p{
+					font-weight: 500;
+					font-size: 13px;
+					line-height: 15px;
+				}
+			}
+		}
+		&__addtocart{
+			width: 157.25px;
+			height: 32.73px;
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 15px;
+			margin-left: 16px;
+			svg{
+				width: 10.95px;
+				height: 10.95px;
+				margin-right: 6.78px;
+			}
+		}
+		&__remove{
+			width: 157.25px;
+			height: 32.73px;
+			font-weight: normal;
+			font-size: 13px;
+			line-height: 15px;
+			margin-left: 16px;
+		}
+	}
+}
+@media (max-width: 992px){
+	.compare{
+		padding-top: 11px;
+		padding-bottom: 15px;
+		&__head{
+			margin-bottom: 28px;
+			h1{
+				font-weight: 500;
+				font-size: 17px;
+				line-height: 20px;
+			}
+			p{
+				display: none;
+			}
+		}
+		&__body{
+			width: 100vw;
+			margin-left: -15px;
+			margin-right: -15px;
+			padding-left: 15px;
+		}
+		main{
+			width: 185px;
+			overflow-y: scroll;
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+		aside{
+			width: 120px;
+			box-shadow: 15px 0px 17px -12px rgba(0, 0, 0, 0.1);
+			position: relative;
+			z-index: 1;
+		}
+		&__th{
+			padding-top: 13.82px;
+			padding-bottom: 15.07px;
+		}
+		&__td{
+			border-left: none;
+			&_title{
+				padding-top: 0;
+			}
+			&_image{
+				padding-top: 24.99px;
+				padding-bottom: 25.66px;
+				figure{
+					height: 81px;
+					width: 81px;
+				}
+			}
+			&_price{
+				padding-top: 13.34px;
+				padding-bottom: 15px;
+			}
+			&_model{
+				padding-top: 13.34px;
+				padding-bottom: 14px;
+			}
+			&_material{
+				padding-top: 13.34px;
+				padding-bottom: 14px;
+			}
+			&_manufacturer{
+				padding-top: 13.34px;
+				padding-bottom: 15px;
+			}
+			&_actuality{
+				padding-top: 13.34px;
+				padding-bottom: 15px;
+			}
+			&_weight{
+				padding-top: 13.34px;
+				padding-bottom: 14px;
+			}
+			&_size{
+				padding-top: 13.34px;
+				padding-bottom: 15px;
+			}
+		}
+		&__item{
+			border-left: 1px solid #EFEFEF;
+			width: 200px;
+			flex: none;
+		}
+		&__addtocart{
+			margin-left: 13px;
+			margin-top: 17px;
+			background: $primary;
+			color: $background;
+			margin-bottom: 9px;
+			svg{
+				path{
+					fill: $background;
+				}
+			}
+		}
+		&__remove{
+			border: 1px solid #EDEDED;
+			margin-left: 13px;
+		}
+		&__th, &__td{
+			&_title{
+				height: 64px;
+			}
+			&_image{
+				height: 132.64px;
+			}
+			&_price{
+				height: 44.33px;
+			}
+			&_model{
+				height: 43.33px;
+			}
+			&_material{
+				height: 43.33px;
+			}
+			&_manufacturer{
+				height: 44.33px;
+			}
+			&_actuality{
+				height: 44.33px;
+			}
+			&_weight{
+				height: 43.33px;
+			}
+			&_size{
+				height: 44.33px;
+			}
+		}
+	}
+}

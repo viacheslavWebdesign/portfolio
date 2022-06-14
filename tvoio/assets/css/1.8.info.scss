@@ -1,0 +1,129 @@
+.info{
+	padding-top: 5px;
+	padding-bottom: 65px;
+	&__row{
+		display: flex;
+	}
+	&__content{
+		flex: 1;
+		padding-top: 19px;
+	}
+	&__promos{
+		width: 296px;
+		margin-left: 68px;
+	}
+	&__tabs{
+		display: flex;
+		align-items: center;
+		margin-bottom: 29px;
+	}
+	&__tab{
+		text-decoration: none;
+		outline: none;
+		box-shadow: none;
+		background: none;
+		border: solid 1px $background;
+		padding: 10px 25px;
+		margin-right: 22px;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 21px;
+		color: #585858;
+		border-radius: 7px;
+		cursor: pointer;
+		&_about{
+			padding: 12px 38px 10px 39px;
+		}
+		&:hover{
+			background: #F5F5F5;
+		}
+		&_current{
+			color: $primary;
+			border: solid 1px $primary;
+			&:hover{
+				background: none;
+			}
+		}
+	}
+	&__body{
+		display: none;
+		&_active{
+			display: block;
+		}
+		h2{
+			margin: 0;
+			font-weight: 500;
+			font-size: 22px;
+			line-height: 26px;
+			color: #000000;
+			margin-bottom: 23px;
+		}
+		p{
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 27px;
+			color: #444444;
+			margin-bottom: 32px;
+		}
+	}
+}
+
+@media (max-width: 1200px){
+	.info{
+		&__tab{
+			font-weight: normal;
+			font-size: 13px;
+			line-height: 15px;
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+	}
+}
+@media (max-width: 992px){
+	.info{
+		padding-top: 15px;
+		padding-bottom: 25px;
+		&__content{
+			width: 100%;
+			padding: 0;
+		}
+		&__promos{
+			display: none;
+		}
+		&__tabs{
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-bottom: 15px;
+		}
+		&__tab{
+			width: calc((100% - 10px) / 2);
+			margin: 0 0 6px;
+			padding-left: 0;
+			padding-right: 0;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+			background: #F5F5F5;
+			&_current{
+				border: solid 1px $background;
+				background: $primary;
+				color: $background;
+			}
+		}
+		&__body{
+			h2{
+				font-weight: 500;
+				font-size: 17px;
+				line-height: 20px;
+				margin-bottom: 13px;
+			}
+			p{
+				font-weight: normal;
+				font-size: 13px;
+				line-height: 18px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

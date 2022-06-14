@@ -1,0 +1,86 @@
+.page-success{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
+	width: 100%;
+	padding: 180px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	.block-success{
+		padding: 60px 70px 70px;
+		max-width: 583px;
+		width: 100%;
+		background: $white;
+		position: relative;
+		.btn-close-link{
+			position: absolute;
+			top: 25px;
+			right: 25px;
+			cursor: pointer;
+			display: block;
+			path{
+				transition: all 0.3s;
+			}
+			&:hover{
+				path{
+					fill: $orange;
+				}
+			}
+		}
+		.title{
+			font-weight: 500;
+			font-size: 45px;
+			line-height: 51px;
+			color: $black;
+			margin: 0 0 26px;
+		}
+		.subtitle{
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 25px;
+			color: $black;
+			margin: 0 0 35px;
+		}
+		.btn-back{
+			text-decoration: none;
+			outline: none;
+			box-shadow: none;
+			border: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 60px;
+			width: 265px;
+			background: $orange;
+			border-radius: 50px;
+			color: $white;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 24px;
+			cursor: pointer;
+			transition: all 0.3s;
+			text-align: center;
+			&:hover{
+				background: #FF9A2D;
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px){
+	.page-success{
+		padding: 100px 0;
+	}
+}
+
+@media (max-width: 1200px){
+	.page-success{
+		padding: 50px 0;
+		.block-success{
+			padding: 60px 15px;
+		}
+	}
+}

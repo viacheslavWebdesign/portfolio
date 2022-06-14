@@ -1,0 +1,159 @@
+.block-faq{
+	padding: 68px 0 100px;
+	.respondent{
+		width: 100%;
+		max-width: 214px;
+		figure{
+			width: 100%;
+			display: block;
+			position: relative;
+			margin: 0 0 25px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			&:after{
+				display: block;
+				content: '';
+				padding-top: 111.21495327102804%;
+			}
+		}
+		.uptext{
+			text-align: center;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 21px;
+			color: $black;
+			margin-bottom: 15px;
+		}
+		.name{
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 21px;
+			color: $black;
+			margin-bottom: 8px;
+			text-align: center;
+		}
+		.subtext{
+			text-align: center;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+			color: #677B8F;
+			margin: 0;
+		}
+	}
+	.faq-item{
+		width: 100%;
+		border-bottom: 1px solid #E3EAEE;
+		.faq-head{
+			padding: 34px 30px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			transition: all 0.3s;
+			cursor: pointer;
+			p{
+				font-weight: normal;
+				font-size: 24px;
+				line-height: 23px;
+				color: $black;
+				margin: 0;
+				transition: all 0.3s;
+				flex: 1
+			}
+			figure{
+				height: 38px;
+				width: 38px;
+				border-radius: 50%;
+				position: relative;
+				background: $gray;
+				transition: all 0.3s;
+				svg{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					transition: all 0.3s;
+					path{
+						transition: all 0.3s;
+					}
+					&:last-of-type{
+						opacity: 0;
+					}
+				}
+			}
+			&:hover{
+				p{
+					color: $orange;
+				}
+				figure{
+					background: $orange;
+					svg{
+						&:first-of-type{
+							path{
+								fill: $white
+							}
+						}
+					}
+				}
+			}
+		}
+		.faq-content{
+			padding: 30px 30px 35px;
+			display: none;
+			p{
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 22px;
+				color: $black;
+				margin: 0;
+			}
+		}
+		&.active{
+			.faq-head{
+				background: $orange;
+				p{	
+					color: $white;
+				}
+				figure{
+					background: $white;
+					svg{
+						&:first-of-type{
+							opacity: 0;
+						}
+						&:last-of-type{
+							opacity: 1;
+						}
+					}
+				}
+			}
+			.faq-content{
+				display: block;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px){
+	.block-faq{
+		padding: 45px 0;
+		.respondent{
+			margin: 0 auto 30px;
+		}
+		.faq-item{
+			.faq-head{
+				padding: 15px;
+				figure{
+					margin-left: 15px;
+				}
+				p{
+					font-size: 18px;
+					line-height: 24px;
+				}
+			}
+			.faq-content{
+				padding: 15px 15px 20px;
+			}
+		}
+	}
+}
