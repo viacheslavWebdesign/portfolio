@@ -1,0 +1,125 @@
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: $bodyBackgroundPrimary;
+	z-index: 20;
+	&__row{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 75px;
+	}
+	&__btn{
+		position: relative;
+		width: 30px;
+		height: 20px;
+		cursor: pointer;
+		span{
+			background: #000;
+			height: 2px;
+			width: 100%;
+			position: absolute;
+			transition: $transition;
+			&:nth-of-type(1){
+				transform: translate(-50%,0%) rotate(0deg);
+				left: 50%;
+				top: 0;
+			}
+			&:nth-of-type(2){
+				transform: translate(-50%,-50%);
+				left: 50%;
+				top: 50%;
+			}
+			&:nth-of-type(3){
+				transform: translate(-50%,0%) rotate(0deg);
+				left: 50%;
+				bottom: 0;
+			}
+		}
+		&:hover{
+			span{
+				&:nth-of-type(1){
+					transform: translate(-50%,0%) rotate(35deg);
+				}
+				&:nth-of-type(2){
+					width: 0;
+				}
+				&:nth-of-type(3){
+					transform: translate(-50%,0%) rotate(-35deg);
+				}
+			}
+		}
+	}
+	&__logo{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		position: relative;
+		img{
+			height: 26.84px;
+			width: auto;
+			display: block;
+		}
+	}
+	&__line{
+		position: relative;
+		height: 3px;
+		background: #000;
+		min-width: 50px;
+		margin-right: -5px;
+		margin-left: -15px;
+		max-width: 500px;
+	}
+	&__lang{
+		width: 30px;
+		a{
+			text-decoration: none;
+			color: $bodyColorPrimary;
+			font-size: 0.875rem;
+			transition: $transition;
+			&:hover{
+				color: $bodyColorAccent;
+			}
+		}
+	}
+}
+
+.placer{
+	height: 1000vh;
+}
+
+@media (max-width: 992px){
+	.header{
+		&__row{
+			height: 45px;
+		}
+		&__btn{
+			height: 15px;
+			width: 20px;
+		}
+		&__logo{
+			img{
+				height: 15.22px;
+			}
+		}
+		&__line{
+			height: 2px;
+			top: -1px;
+			margin-right: -2px;
+			margin-left: -8px;
+			min-width: 20px;
+			max-width: 100px;
+			&:before{
+				display: none;
+			}
+		}
+		&__lang{
+			a{
+				font-size: 1.063rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,176 @@
+.contacts{
+	&__section{
+		position: relative;
+		.container{
+			position: relative;
+			z-index: 1;
+		}
+	}
+	&__background{
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__title{
+		margin: 0;
+		color: $bodyColorPrimary;
+		line-height: 1.55;
+		font-weight: bold;
+		font-size: 1.875rem;
+		position: relative;
+		span{
+			color: rgb(255, 153, 158);
+		}
+	}
+	&__row{
+		display: flex;
+		align-items: center;
+		min-height: 700px;
+	}
+	&__content{
+		width: 100%;
+		max-width: 230px;
+		margin-left: auto;
+	}
+	&__col{
+		width: calc(50% - 20px);
+		margin-right: 40px;
+		&:last-of-type{
+			margin-right: 0;
+			display: flex;
+		}
+	}
+	&__text{
+		color: $bodyColorPrimary;
+		line-height: 1.4;
+		font-size: 0.875rem;
+		a{
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+	&__title-wrap{
+		position: relative;
+		left: -50px;
+		opacity: 0;
+		transition: all 1s ease;
+		transition-delay: 1s;
+		&_animated{
+			left: 0;
+			opacity: 1;
+		}
+	}
+	&__soc{
+		position: absolute;
+		transform: translateY(-50%);
+		top: 50%;
+		right: 35px;
+		z-index: 1;
+		a{
+			text-decoration: none;
+			display: block;
+			transition: $transition;
+			margin-bottom: 15px;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+			&:hover{
+				opacity: 0.7;
+			}
+			img{
+				height: 25px;
+				width: auto;
+				display: block;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px){
+	.contacts{
+		&__row{
+			display: block;
+			min-height: unset;
+			padding-top: 40px;
+		}
+		&__col{
+			width: 100%;
+			margin-right: 0;
+		}
+		&__content{
+			margin-left: 0;
+		}
+		&__background{
+			position: relative;
+			height: auto;
+			&:after{
+				content: '';
+				display: block;
+				position: relative;
+				padding-top: 76.328502415459%;
+			}
+		}
+		&__soc{
+			display: flex;
+			align-items: center;
+			position: relative;
+			transform: none;
+			top: 0;
+			right: 0;
+			padding: 30px 20px 70px;
+			a{
+				margin-bottom: 0;
+				margin-right: 15px;
+				&:last-of-type{
+					margin-right: 0;
+				}
+			}
+		}
+		&__text{
+			font-size: 1rem;
+		}
+		&__title{
+			margin-bottom: 40px;
+		}
+	}
+}
+
+@media (max-width: 992px) and (min-width: 577px){
+	.contacts{
+		&__section{
+			display: flex;
+			flex-direction: column;
+			.container{
+				order: 1;
+			}
+		}
+		&__background{
+			order: 0;
+			&:after{
+				padding-top: 57.560975609756%;
+			}
+		}
+		&__soc{
+			order: 2;
+			max-width: 290px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			padding-left: 0;
+		}
+		&__text{
+			font-size: 0.875rem;
+		}
+		&__row{
+			max-width: 290px;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

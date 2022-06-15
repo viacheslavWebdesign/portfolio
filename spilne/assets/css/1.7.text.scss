@@ -1,0 +1,21 @@
+.text{
+	&__section{
+		padding: 45px 0 120px;
+		article{
+			width: 100%;
+			margin: 0 auto;
+			max-width: 760px;
+			line-height: 1.55;
+		}
+	}
+}
+
+@media (max-width: 992px) and (min-width: 577px){
+	.text{
+		&__section{
+			padding-top: 75px;
+			margin-left: 90px;
+			margin-right: 90px;
+		}
+	}
+}

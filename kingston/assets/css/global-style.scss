@@ -1,0 +1,471 @@
+@import "vars";
+
+@font-face {
+    font-family: 'HeliosCond';
+    src: url('../fonts/HeliosCond-Bold.eot');
+    src: local('HeliosCond Bold'), local('HeliosCond-Bold'),
+        url('../fonts/HeliosCond-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HeliosCond-Bold.woff') format('woff'),
+        url('../fonts/HeliosCond-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HeliosCond';
+    src: url('../fonts/HeliosCond-Bold-Italic.eot');
+    src: local('HeliosCond Bold Italic'), local('HeliosCond-Bold-Italic'),
+        url('../fonts/HeliosCond-Bold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HeliosCond-Bold-Italic.woff') format('woff'),
+        url('../fonts/HeliosCond-Bold-Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HeliosCond';
+    src: url('../fonts/HeliosCond-Italic.eot');
+    src: local('HeliosCond Italic'), local('HeliosCond-Italic'),
+        url('../fonts/HeliosCond-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HeliosCond-Italic.woff') format('woff'),
+        url('../fonts/HeliosCond-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HeliosCond';
+    src: url('../fonts/HeliosCond.eot');
+    src: local('HeliosCond Regular'), local('HeliosCond'),
+        url('../fonts/HeliosCond.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HeliosCond.woff') format('woff'),
+        url('../fonts/HeliosCond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+button, input, textarea, select{
+	&:active, &:focus, &:hover{
+		outline: none !important;
+	}
+}
+
+html, .kmnd-body{
+	width: 100%;
+}
+
+.lazyload, .lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.kmnd-body{
+	min-width: 320px;
+    min-height: 100vh;
+    font-family: $bodyFontPrimary;
+    font-size: 1rem;
+    font-size: 16px;
+    color: $bodyColorPrimary;
+    background-color: $bodyBackgroundPrimary;
+    margin: 0 auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding-top: 85px;
+    &_noscroll{
+        overflow: hidden;
+    }
+}
+
+main{
+	position: relative;
+	overflow: hidden;
+}
+
+.container{
+	max-width: var(--kmnd-container-max-width);
+	padding: 0 20px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.d-flex{
+	display: flex;
+}
+
+.justify-content-center{
+	justify-content: center;
+}
+
+.bg-cover{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.bg-contain{
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.bg-100{
+    // background-size: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn-primary{
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $bodyColorPrimary;
+    font-size: 0.938rem;
+    position: relative;
+    padding: 14px 15px;
+    min-width: 237px;
+    transition: $transition;
+    background: none;
+    span{
+        position: relative;
+        z-index: 2;
+        transition: inherit;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../img/btn-primary1.png") no-repeat center / 100% 100%;
+        z-index: 1;
+        transition: inherit;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        display: block;
+        top: 5px;
+        left: -5px;
+        width: 100%;
+        height: 100%;
+        background: url("../img/btn-primary2.png") no-repeat center / 100% 100%;
+        transition: inherit;
+    }
+    &:hover{
+        span{
+            opacity: 0.5;
+        }
+        &:after{
+            top: 7px;
+            left: -7px;
+        }
+    }
+}
+
+.btn-secondary{
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $bodyColorPrimary;
+    font-size: 0.938rem;
+    position: relative;
+    padding: 14px 15px;
+    min-width: 237px;
+    transition: $transition;
+    background: none;
+    span{
+        position: relative;
+        z-index: 2;
+        transition: inherit;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../img/btn-secondary1.png") no-repeat center / 100% 100%;
+        z-index: 1;
+        transition: inherit;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        display: block;
+        top: 5px;
+        left: -5px;
+        width: 100%;
+        height: 100%;
+        background: url("../img/btn-primary2.png") no-repeat center / 100% 100%;
+        transition: inherit;
+    }
+    &:hover{
+        span{
+            opacity: 0.5;
+        }
+        &:after{
+            top: 7px;
+            left: -7px;
+        }
+    }
+}
+
+.title{
+    position: relative;
+    z-index: 1;
+    &__background{
+        padding: 9px 0;
+        min-height: 218px;
+        background-color: $bodyBackgroundPrimary;
+    }
+    &__title{
+        font-weight: 700;
+        margin: 0 0 20px;
+        text-align: center;
+        font-size: 4.5rem;
+        line-height: 5.25rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    &__text{
+        text-align: center;
+        max-width: 543px;
+        margin: 0 auto;
+        font-size: 1.625rem;
+        letter-spacing: 0.1em;
+        line-height: 2rem;
+    }
+}
+
+.video{
+    max-width: 870px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    &__preloader{
+        width: 100%;
+        position: relative;
+        display: block;
+        &:after{
+            display: block;
+            position: relative;
+            content: "";
+            padding-top: 56.092%;
+        }
+    }
+    &__btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 97px;
+        height: 97px;
+        background: $bodyBackgroundSecondary;
+        border-radius: 50%;
+        transition: $transition;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        cursor: pointer;
+        svg{
+            transition: inherit;
+            transform: rotate(0deg);
+        }
+        &:hover{
+            svg{
+                opacity: 0.5;
+                transform: rotate(360deg);
+            }
+        }
+    }
+    &__wrap{
+        display: none;
+        margin: 0 auto;
+        height: 0;
+        position: relative;
+        padding-bottom: 56.25%;
+        iframe{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    } 
+    &_active{
+        .video{
+            &__preloader{
+                display: none;
+            }
+            &__wrap{
+                display: block;
+            }
+        }
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+
+.title{
+    font-weight: 700;
+    margin: 0;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.input-text{
+    display: block;
+    background: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    border: solid 2px $bodyColorPrimary;
+    padding: 15px;
+    width: 100%;
+    color: $bodyColorPrimary;
+    font-size: 1.125rem;
+}
+
+.input-checkbox{
+    label{
+        display: block;
+        padding-left: 30px;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            height: 18px;
+            width: 18px;
+            border: solid 1px $bodyColorPrimary;
+            border-radius: 3px;
+            transition: $transition;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            left: 3px;
+            top: 5px;
+            height: 12px;
+            width: 12px;
+            border-radius: 3px;
+            background: $bodyBackgroundSecondary;
+            opacity: 0;
+            transition: $transition;
+        }
+        &:hover{
+            &:after{
+                opacity: 1;
+            }
+        }
+    }
+    input[type="checkbox"]:checked{
+        & + label{
+            &:after{
+                opacity: 1;
+            }
+            &:before{
+                border-color: $bodyBackgroundSecondary;
+            }
+        }
+    }
+}
+
+.pt-lg-190{
+    padding-top: 190px;
+}
+
+.pt-lg-150{
+    padding-top: 150px;
+}
+
+.mt-lg-130{
+    margin-top: 130px;
+}
+
+@media (max-width: 992px){
+    .pt-sm-60{
+        padding-top: 60px;
+    }
+    .pt-sm-50{
+        padding-top: 50px;
+    }
+    .mt-sm-60{
+        margin-top: 60px;
+    }
+    .kmnd-body{
+        padding-top: 60px;
+    }
+    .title{
+        &__background{
+            background-size: 100% 100%;
+        }
+        &__title{
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+        &__text{
+            font-size: 1.125rem;
+            line-height: 1.688rem;
+        }
+    }
+    .title{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}

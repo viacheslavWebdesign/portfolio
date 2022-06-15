@@ -1,0 +1,23 @@
+.buttons-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .buttons-row .btn-default {
+    width: 330px; }
+
+@media (max-width: 992px) {
+  .buttons-row {
+    display: block; }
+    .buttons-row .btn-default {
+      width: 100%;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-bottom: 30px; }
+      .buttons-row .btn-default:last-of-type {
+        margin-bottom: 0; } }

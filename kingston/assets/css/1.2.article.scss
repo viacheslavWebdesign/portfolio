@@ -1,0 +1,44 @@
+.article{
+	&__section{
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: top center;
+		padding-top: 165px;
+		border-bottom: 2px solid #D21438;
+		padding-bottom: 120px;
+	}
+	&__title{
+		text-align: center;
+	}
+	&__subtitle{
+		text-align: center;
+		margin: 20px 0 80px;
+		font-size: 1.25rem;
+		font-weight: bold;
+	}
+	&__pretext{
+		color: #c5c5c5;
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto 40px;
+		font-size: 1.5rem;
+		line-height: 1.75rem;
+	}
+	&__text{
+		font-weight: bold;
+		line-height: 1.375rem;
+		font-size: 1.125rem;
+		color: #c5c5c5;
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto;
+		font-family: $bodyFontPrimary;
+		white-space: pre-wrap;
+		.white{
+			color: #fff;
+		}
+	}
+	&__button{
+		margin-top: 40px;
+	}
+}

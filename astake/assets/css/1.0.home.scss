@@ -1,0 +1,34 @@
+.head{
+	&__title{
+		color: $bodyColorPrimary;
+		font-family: $bodyFontSecondary;
+		font-size: 4rem;
+		letter-spacing: -0.03em;
+		margin: 0;
+		padding: 60px 0 100px;
+		border-bottom: 1px solid $bodyBorderColorPrimary;
+		font-weight: 700;
+		span{
+			color: $bodyColorTertiary;
+		}
+	}
+}
+
+.theme-dark{
+	.head{
+		&__title{
+			color: #fff;
+			border-color: rgba(255,255,255,0.1);
+		}
+	}
+}
+
+@media (max-width: 767px){
+	.head{
+		&__title{
+			padding: 40px 0;
+			font-size: 2.25rem;
+		}
+	}
+}
+

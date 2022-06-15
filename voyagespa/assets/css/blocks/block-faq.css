@@ -1,0 +1,67 @@
+.faq-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.faq-col {
+  width: calc(50% - 30px);
+  margin-right: 60px; }
+  .faq-col:nth-of-type(even) {
+    margin-right: 0; }
+
+.faq-item {
+  margin-bottom: 19px; }
+  .faq-item:last-of-type {
+    margin-bottom: 0; }
+  .faq-item.active .faq-head:after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .faq-item.active .faq-content {
+    padding: 27px 44px 13px 26px;
+    max-height: 600px; }
+
+.faq-head {
+  width: 100%;
+  color: var(--kmnd-body-color);
+  padding: 18px 44px 18px 25px;
+  position: relative;
+  font-family: var(--kmnd-body-tertiary-font-family);
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  line-height: 1.182em;
+  letter-spacing: .035em;
+  border: solid 1px var(--kmnd-body-border-color);
+  cursor: pointer; }
+  .faq-head:after {
+    content: '';
+    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.53 9.47a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 1 1 1.06-1.06L12 14.94l5.47-5.47a.75.75 0 0 1 1.06 0Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center/contain;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    -webkit-transition: var(--kmnd-body-transition);
+    -o-transition: var(--kmnd-body-transition);
+    transition: var(--kmnd-body-transition); }
+
+.faq-content {
+  padding: 0px 44px 0px 26px;
+  color: var(--kmnd-body-color);
+  opacity: 0.7;
+  font-size: 1.25rem;
+  line-height: 1.4em;
+  max-height: 0;
+  -webkit-transition: var(--kmnd-body-transition);
+  -o-transition: var(--kmnd-body-transition);
+  transition: var(--kmnd-body-transition);
+  overflow: hidden; }
+
+@media (max-width: 992px) {
+  .faq-row {
+    display: block; }
+  .faq-col {
+    width: 100%;
+    margin-right: 0; }
+    .faq-col:first-of-type {
+      margin-bottom: 19px; } }
