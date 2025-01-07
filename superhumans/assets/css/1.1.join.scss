@@ -1,0 +1,319 @@
+.mission{
+   &__section{
+      padding-top: 66px;
+   }
+   &__row{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__col{
+      &:nth-of-type(1){
+         width: 64.79%;
+      }
+      &:nth-of-type(2){
+         width: 25.27%;
+      }
+   }
+   &__title-row{
+      display: flex;
+      align-items: center;
+      &_1{
+         margin-bottom: 27px;
+      }
+   }
+   &__text{
+      font-size: 4.8rem;
+      font-family: $fontSecondary;
+      &_1{
+         animation: fadeInRight100 1.5s ease-in-out both;
+      }
+      &_2{
+         animation: fadeInLeft100 1.5s ease-in-out both;
+      }
+   }
+   &__img{
+      width: 280px;
+      position: relative;
+      display: block;
+      margin: 0;
+      &:after{
+         content: '';
+         display: block;
+         position: relative;
+         padding-top: 35.71%;
+      }
+      &_1{
+         margin-left: 30px;
+         animation: fadeInLeft100 1.5s ease-in-out both;
+      }
+      &_2{
+         margin-right: 10px;
+         width: 269px;
+         animation: fadeInRight100 1.5s ease-in-out both;
+      }
+   }
+   &__divider{
+      margin: 40px 0;
+      animation: fadeInRight100 1.5s ease-in-out both;
+   }
+   &__subtext{
+      font-size: 1.375rem;
+      animation: fadeInUp 1.5s ease-in-out both;
+   }
+   &__content{
+      padding: 41px 30px 25px 31px;
+      background: $colorFourth;
+      border-radius: 46px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp150 1.5s ease-in-out both;
+   }
+   &__avatar{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $colorSecondary;
+      border-radius: 0 0 0 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      figure{
+         height: 85px;
+         width: 85px;
+         border-radius: 50%;
+         display: block;
+      }
+   }
+   &__content-head{
+      width: 60%;
+      border-bottom: 1px solid rgba(255,255,255,0.51);
+      padding-bottom: 16px;
+      margin-bottom: 32px;
+   }
+   &__name{
+      font-family: $fontSecondary;
+      font-weight: bold;
+      font-size: 0.875rem;
+      color: $colorSecondary;
+      margin-bottom: 3px;
+   }
+   &__position{
+      font-family: $fontSecondary;
+      font-size: 0.875rem;
+      font-style: italic;
+      color: $colorSecondary;
+   }
+   &__content-text{
+      color: $colorSecondary;
+      font-size: 0.875rem;
+      line-height: 1.571;
+   }
+   &__bottom{
+      margin-top: 41px;
+      display: flex;
+      align-items: center;
+      animation: fadeInUp 1.5s ease-in-out both;
+   }
+   &__avatars{
+      height: 100px;
+      width: auto;
+      display: block;
+      margin-right: 43px;
+   }
+   &__bottom-content{
+      padding: 4px 4px 4px 25px;
+      border: solid 1px #000000;
+      border-radius: 138px;
+      display: flex;
+      align-items: center;
+      p{
+         color: #000;
+         margin-right: 20px;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'lg')){
+   .mission{
+      &__text{
+         font-size: 2.5rem;
+      }
+      &__img{
+         width: 200px;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'sm')){
+   .mission{
+      &__section{
+         padding-top: 42px;
+      }
+      &__row{
+         display: block;
+      }
+      &__col{
+         &:nth-of-type(1){
+            width: 100%;
+         }
+         &:nth-of-type(2){
+            width: 100%;
+         }
+      }
+      &__text{
+         font-size: 2.4rem;
+      }
+      &__img{
+         width: 140px;
+         &_1{
+            margin-left: 10px;
+         }
+         &_2{
+            margin-right: 0px;
+         }
+      }
+      &__divider{
+         margin: 25px 0;
+      }
+      &__subtext{
+         margin-bottom: 30px;
+         font-size: 1.125rem;
+         line-height: 1.667;
+      }
+      &__content{
+         width: 275px;
+         margin: 0 auto 31px;
+         padding: 41px 30px 25px 31px;
+      }
+      &__bottom{
+         margin-top: 31px;
+      }
+      &__avatars{
+         display: none;
+      }
+      &__bottom-content{
+         width: 256px;
+         margin: 0 auto;
+      }
+   }
+}
+
+@media (max-width: 380px){
+   .mission{
+      &__text{
+         font-size: 2.2rem;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'xs')){
+   .mission{
+      &__text{
+         font-size: 1.8rem;
+      }
+      &__img{
+         width: 120px;
+      }
+   }
+}
+
+.request{
+   &__section{
+      margin-top: 76px;
+      margin-bottom: 91px;
+      padding: 67px 0 73px;
+   }
+   &__divider{
+        margin: 43px 0;
+   }
+   &__text{
+      font-size: 1.375rem;
+      line-height: 1.545;
+      width: 100%;
+      max-width: 938px;
+      margin-bottom: 50px;
+   }
+   &__form{
+      width: 100%;
+      max-width: 735px;
+      .input{
+         margin-bottom: 53px;
+      }
+      .textarea{
+         margin-bottom: 50px;
+      }
+   }
+   &__buttons{
+      display: flex;
+   
+   }
+   &__submit{
+      font-size: 1rem;
+      padding: 12px 15px;
+      min-width: 159px;
+      margin-left: 36px;
+      min-width: 146px;
+      svg{
+         margin-left: 10px;
+      }
+      &:hover{
+         background: none;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'lg')){
+   .request{
+      &__section{
+         
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'sm')){
+   .request{
+      &__section{
+         padding: 44px 0 51px;
+         margin: 50px 0;
+      }
+      &__text{
+         font-size: 1.125rem;
+         margin-bottom: 22px;
+      }
+      &__divider{
+         margin: 20px 0 22px;
+      }
+      &__form{
+         .input{
+            margin-bottom: 30px;
+         }
+         .textarea{
+            margin-bottom: 44px;
+         }
+      }
+      &__submit{
+         padding: 8px 15px;
+         margin-left: 30px;
+         min-width: 125px;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'xs')){
+   .request{
+      &__submit{
+         margin-left: 15px;
+         min-width: 110px;
+      }
+      &__buttons{
+         .file{
+            label{
+               min-width: 135px;
+            }
+         }
+      }
+   }
+}

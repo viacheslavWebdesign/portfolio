@@ -1,0 +1,61 @@
+/** var root**/
+$bodyBackgroundPrimary: var(--kmnd-body-background-primary);
+$bodyBackgroundSecondary: var(--kmnd-body-background-secondary);
+$bodyBackgroundTertiary: var(--kmnd-body-background-tertiary);
+$bodyBackgroundNeutral: var(--kmnd-body-background-neutral);
+$bodyBackgroundAccent: var(--kmnd-body-background-accent);
+$bodyBackgroundPrimaryInverted: var(--kmnd-body-background-primary-inverted);
+$bodyBackgroundSecondaryInverted: var(--kmnd-body-background-secondary-inverted);
+$bodyBackgroundTertiaryInverted: var(--kmnd-body-background-tertiary-inverted);
+$bodyBackgroundNeutralInverted: var(--kmnd-body-background-neutral-inverted);
+$bodyBackgroundAccentInverted: var(--kmnd-body-background-accent-inverted);
+
+$bodyColorPrimary: var(--kmnd-body-color-primary);
+$bodyColorSecondary: var(--kmnd-body-color-secondary);
+$bodyColorTertiary: var(--kmnd-body-color-tertiary);
+$bodyColorNeutral: var(--kmnd-body-color-neutral);
+$bodyColorAccent: var(--kmnd-body-color-accent);
+$bodyColorPrimaryInverted: var(--kmnd-body-color-primary-inverted);
+$bodyColorSecondaryInverted: var(--kmnd-body-color-secondary-inverted);
+$bodyColorTertiaryInverted: var(--kmnd-body-color-tertiary-inverted);
+$bodyColorNeutralInverted: var(--kmnd-body-color-neutral-inverted);
+$bodyColorAccentInverted: var(--kmnd-body-color-accent-inverted);
+
+$bodyBorderColorPrimary: var(--kmnd-body-border-color-primary);
+$bodyBorderColorSecondary: var(--kmnd-body-border-color-secondary);
+$bodyBorderColorTertiary: var(--kmnd-body-border-color-tertiary);
+$bodyBorderColorNeutral: var(--kmnd-body-border-color-neutral);
+$bodyBorderColorAccent: var(--kmnd-body-border-color-accent);
+
+$bodyFontPrimary: var(--kmnd-body-font-family-primary);
+$bodyFontSecondary: var(--kmnd-body-font-family-secondary);
+$bodyFontTertiary: var(--kmnd-body-font-family-tertiary);
+
+$fontSize: var(--kmnd-font-size);
+$lineHeight: var(--kmnd-line-height);
+
+$containerMaxWidth: var(--kmnd-container-max-width, 1200px);
+$containerMaxWidthTablet: var(--kmnd-container-max-width-tablet);
+$containerPadding: var(--kmnd-container-padding, 1rem);
+
+$transition: var(--kmnd-transition);
+
+/** breakpoints **/ 
+$adaptive-breakpoints: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px,
+);
+/** spacing margin padding **/ 
+$spaceamounts: (
+  0: 0rem,
+  1: .25rem,
+  2: .5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 2rem,
+  6: 3rem
+);

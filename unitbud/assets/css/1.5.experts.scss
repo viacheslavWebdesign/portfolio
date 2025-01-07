@@ -1,0 +1,132 @@
+.experts{
+   &__section{
+      padding: 105px 0 72px;
+      background: $bodyBackgroundSecondary;
+   }
+   &__breadcrumbs{
+      margin-bottom: 58px;
+   }
+   &__title{
+      margin: 0 0 37px;
+   }
+   &__divider{
+      margin: 0 0 37px;
+      border: none;
+      border-top: 1px solid #939392;
+   }
+   &__subtitle{
+      margin: 0 0 48px;
+      max-width: 700px;
+   }
+   &__image{
+      width: 100%;
+      height: auto;
+      margin-bottom: 58px;
+   }
+   &__grid{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__col{
+      width: calc((100% - 63px) / 2);
+      margin-right: 63px;
+      margin-bottom: 30px;
+      &:nth-of-type(even){
+         margin-right: 0;
+      }
+   }
+   &__item{
+      padding: 30px 0 0;
+      border-top: 1px solid #939392;
+   }
+   &__row{
+      display: flex;
+      align-items: center;
+      margin-bottom: 43px;
+   }
+   &__avatar{
+      width: 197px;
+      height: 195px;
+      border-radius: 50%;
+      margin-right: 68px;
+      border: 2px solid $bodyColorAccent;
+   }
+   &__item-info{
+      flex: 1;
+   }
+   &__item-name{
+      font-size: 2.188rem;
+      margin: 0 0 16px;
+   }
+   &__item-position{
+      color: #7A7A79;
+      margin: 0;
+      max-width: 191px;
+   }
+   &__description{
+      margin-bottom: 24px;
+   }
+}
+
+@media (max-width: 576px){
+   .experts{
+      &__section{
+         padding: 27px 0 34px;
+         background: $bodyBackgroundPrimary;
+      }
+      &__breadcrumbs{
+         margin-bottom: 21px;
+      }
+      &__title{
+         margin: 0 0 21px;
+      }
+      &__divider{
+         margin-bottom: 21px;
+         margin-left: -15px;
+      }
+      &__subtitle{
+         margin-bottom: 27px;
+      }
+      &__image{
+         width: 100vw;
+         margin-left: -15px;
+         margin-bottom: 27px;
+      }
+      &__grid{
+         display: block;
+      }
+      &__col{
+         width: 100%;
+         margin-right: 0;
+         margin-bottom: 0;
+      }
+      &__item{
+         width: 100vw;
+         margin-left: -15px;
+         border-bottom: none;
+         padding: 21px 0 24px;
+      }
+      &__row{
+         padding: 0 15px;
+         margin-bottom: 27px;
+      }
+      &__avatar{
+         width: 122px;
+         height: 121px;
+         margin-right: 30px;
+      }
+      &__item-name{
+         font-size: 1.563rem;
+         margin-bottom: 8px;
+      }
+      &__item-position{
+         font-size: 0.938rem;
+      }
+      &__description{
+         padding: 0 15px;
+      }
+      &__btn{
+         margin-left: 15px;
+      }
+   }
+}

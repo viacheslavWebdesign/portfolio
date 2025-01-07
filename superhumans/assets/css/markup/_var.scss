@@ -1,0 +1,39 @@
+/** var root**/
+
+$colorPrimary: var(--letsmake--color-primary);
+$colorSecondary: var(--letsmake--color-secondary);
+$colorTertiary: var(--letsmake--color-tertiary);
+$colorFourth: var(--letsmake--color-fourth);
+$colorFifth: var(--letsmake--color-fifth);
+
+$fontPrimary: var(--letsmake--font-family-primary);
+$fontSecondary: var(--letsmake--font-family-secondary);
+
+$fontSize: var(--letsmake--font-size);
+$lineHeight: var(--letsmake--line-height);
+
+$contentWidth: var(--letsmake--content-width);
+$contentPadding: var(--letsmake--content-padding);
+
+$transition: var(--letsmake--transition);
+
+/** breakpoints **/ 
+$adaptive-breakpoints: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px,
+);
+/** spacing margin padding **/ 
+$spaceamounts: (
+  0: 0rem,
+  1: .25rem,
+  2: .5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 2rem,
+  6: 3rem,
+  7: 6.75rem
+);

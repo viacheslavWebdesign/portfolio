@@ -1,0 +1,290 @@
+.footer{
+   padding-bottom: 100px;
+   &__block{
+      background: $colorPrimary;
+      padding: 38px 49px 39px 50px;
+      border-radius: 46px;
+   }
+   &__row{
+      display: flex;
+      justify-content: space-between;
+      padding-left: 34px;
+      padding-right: 34px;
+   }
+   &__col{
+      position: relative;
+      &:nth-of-type(1){
+         width: 53.45%;
+      }
+      &:nth-of-type(3){
+         width: 37.45%;
+      }
+   }
+   &__divider{
+      background: rgba(247, 249, 249, 0.8);
+      width: 1px;
+      margin-right: auto;
+   }
+   &__text-subscribe{
+      font-size: 2.063rem;
+      color: $colorSecondary;
+      font-weight: lighter;
+      margin-bottom: 35px;
+   }
+   &__form{
+      display: inline-flex;
+      justify-content: space-between;
+      width: 327px;
+      align-items: center;
+      padding: 4px 4px 4px 25px;
+      border: solid 1px $colorSecondary;
+      border-radius: 138px;
+   }
+   &__input{
+      color: $colorSecondary;
+      display: block;
+      box-sizing: border-box;
+      flex: 1;
+      &::placeholder{
+         color: #AAAAAA;
+      }
+   }
+   &__btn{
+      height: 58px;
+      width: 58px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $transition;
+      background: $colorFifth;
+      &:focus, &:active{
+         background: $colorFifth;
+      }
+      &:hover{
+         background: $colorFourth;
+      }
+   }
+   &__impact{
+      font-family: $fontSecondary;
+      font-size: 2.813rem;
+      color: $colorSecondary;
+      margin: 0 0 27px;
+      span{
+         color: $colorFifth;
+      }
+   }
+   &__donate{
+      &:hover{
+         background: none;
+      }
+   }
+   &__divider2{
+      background: rgba(247, 249, 249, 0.8);
+      width: 100%;
+      height: 1px;
+      border: none;
+      margin: 50px 0 43px;
+   }
+   &__bottom{
+      display: flex;
+      justify-content: space-between;
+      padding-left: 34px;
+      padding-right: 34px;
+      position: relative;
+   }
+   &__menu{
+      width: 53.45%;
+   }
+   &__contacts{
+      width: 37.45%;
+   }
+   &__menu{
+      ul{
+         list-style: none;
+         columns: 2;
+      }
+      li{
+         font-size: 0.875rem;
+         color: #AAAAAA;
+         margin-bottom: 10px;
+         &:last-of-type{
+            margin-bottom: 0;
+         }
+      }
+      a{
+         text-decoration: none;
+         color: inherit;
+         transition: $transition;
+         &:hover{
+            color: $colorFifth;
+         }
+      }
+   }
+   &__contacts-text{
+      font-size: 1.375rem;
+      color: $colorFifth;
+      margin: 0 0 24px;
+   }
+   &__contacts-row{
+      display: flex;
+   }
+   &__contacts-content{
+      width: 62%;
+   }
+   &__contacts-soc{
+      width: 48%;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      a{
+         text-decoration: none;
+         display: block;
+         margin-right: 10px;
+         margin-bottom: 10px;
+         width: 22px;
+         height: 22px;
+         img{
+            width: 100%;
+            height: auto;
+         }
+         &:last-of-type{
+            margin-right: 0;
+         }
+      }
+   }
+   &__contacts-content-title{
+      font-size: 0.875rem;
+      color: $colorFifth;
+      margin-bottom: 4px;
+   }
+   &__contacts-content-text{
+      font-size: 0.875rem;
+      color: #AAAAAA;
+      font-weight: lighter;
+      margin-bottom: 4px;
+      &:last-of-type{
+         margin-bottom: 0;
+      }
+      a{
+         text-decoration: none;
+         color: inherit;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'lg')){
+   .footer{
+      &__row{
+         padding-left: 0px;
+         padding-right: 0px;
+      }
+      &__bottom{
+         display: block;
+         padding-left: 0px;
+         padding-right: 0px;
+      }
+      &__menu{
+         width: 100%;
+         margin-bottom: 30px;
+      }
+      &__contacts{
+         width: 100%;
+      }
+      &__contacts-row{
+         display: block;
+      }
+      &__contacts-content{
+         margin-bottom: 30px;
+         width: 100%;
+      }
+      &__contacts-soc{
+         width: 100%;
+      }
+      &__divider{
+         margin-right: 20px;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'sm')){
+   .footer{
+      &__block{
+         padding: 41px 34px 39px 20px;
+         border-radius: 46px;
+      }
+      &__row{
+         display: block;
+      }
+      &__col{
+         &:nth-of-type(1){
+            width: 100%;
+         }
+         &:nth-of-type(3){
+            width: 100%;
+         }
+      }
+      &__divider{
+         width: 100%;
+         height: 1px;
+         margin: 30px auto;
+      }
+      &__text-subscribe{
+         text-align: center;
+         font-size: 1.375rem;
+         margin: 0 0 30px;
+      }
+      &__form{
+         width: 100%;
+      }
+      &__impact{
+         margin-bottom: 30px;
+      }
+      &__divider2{
+         margin: 30px 0;
+      }
+      &__bottom{
+         display: block;
+      }
+      &__menu{
+         ul{
+            columns: unset;
+         }
+      }
+      &__contacts-text{
+         font-size: 1.125rem;
+         margin-bottom: 10px;
+      }
+      &__contacts-soc{
+         justify-content: center;
+         a{
+            height: 33px;
+            width: 33px;
+         }
+      }
+   }
+}
+
+@media (max-width: 380px){
+   .footer{
+      &__text-subscribe{
+         font-size: 1.25rem;
+      }
+      &__impact{
+         font-size: 2.375rem;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'xs')){
+   .footer{
+      &__block{
+         padding-left: 10px;
+         padding-right: 10px;
+      }
+      &__form{
+         padding-left: 10px;
+      }
+   }
+}

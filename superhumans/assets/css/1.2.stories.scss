@@ -1,0 +1,46 @@
+.stories{
+   &__section{
+      padding: 46px 0 90px;
+   }
+   &__title{
+      margin-bottom: 18px;
+      margin-top: 0;
+      animation: fadeInRight100 1.5s ease-in-out both;
+   }
+   &__item{
+      &_1{
+         animation: fadeInRight100 0.5s ease-in-out both;
+         animation-delay: 0.5s;
+      }
+      &_2{
+         animation: fadeInUp 0.5s ease-in-out both;
+      }
+      &_3{
+         animation: fadeInUp 0.5s ease-in-out both;
+         animation-delay: 0.25s;
+      }
+      &_4{
+         animation: fadeInUp 0.5s ease-in-out both;
+         animation-delay: 0.75s;
+      }
+      &_5{
+         animation: fadeInUp 0.5s ease-in-out both;
+         animation-delay: 1s;
+      }
+      &_6{
+         animation: fadeInUp 0.5s ease-in-out both;
+         animation-delay: 1.25s;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'sm')){
+   .stories{
+      &__section{
+         padding: 36px 0 50px;
+      }
+      &__title{
+         margin-bottom: 20px;
+      }
+   }
+}

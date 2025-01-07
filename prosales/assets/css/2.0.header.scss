@@ -1,0 +1,212 @@
+.header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 100;
+   transition: 0.5s;
+   &__row{
+      height: 128px;
+      display: flex;
+      align-items: center;
+      transition: height 0.5s ease;
+   }
+   &__logo{
+      text-decoration: none;
+      display: inline-block;
+      height: 36px;
+      img{
+         height: 100%;
+         width: auto;
+         display: block;
+      }
+   }
+   &__dropdown{
+      margin-left: auto;
+      margin-right: auto;
+   }
+   &__menu{
+      ul{
+         list-style: none;
+         display: flex;
+         align-items: center;
+      }
+      li{
+         margin-right: 30px;
+         &.current-menu-item{
+            a{
+               color: $bodyColorNeutral;
+               border-color: $bodyBorderColorNeutral;
+            }
+         }
+      }
+      a{
+         text-decoration: none;
+         color: inherit;
+         transition: $transition;
+         border-bottom: 1px solid transparent;
+         padding-bottom: 1px;
+         &:hover{
+            color: $bodyColorAccent;
+         }
+      }
+   }
+   &__phone{
+      a{
+         transition: $transition;
+         pointer-events: none;
+         &:hover{
+            color: $bodyColorAccent;
+         }
+      }
+   }
+   &__soc-item{
+      margin: 0 20px 0 19px;
+   }
+   &__btn{
+      padding: 15px 25px;
+      .btn__content{
+         font-size: 0.875rem;
+         line-height: 1.286;
+      }
+   }
+   &_scrolled{
+      background: $bodyBackgroundPrimary;
+      .header{
+         &__row{
+            height: 80px;
+         }
+      }
+   }
+   &__toggler{
+      height: 38px;
+      width: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      path{
+         transition: $transition;
+      }
+   }
+   &__gradient{
+      display: none;
+      position: absolute;
+      top: 55%;
+      right: 0;
+      transform: translate(50%,-50%) rotate(-0.07deg) translate3d(0, 0, 0);
+      width: 450px;
+      height: auto;
+      opacity: 0.4;
+      filter: blur(70px);
+      border-radius: 1000px;
+      pointer-events: none;
+   }
+}
+
+@media (max-width: 992px){
+   .header{
+      // overflow: hidden;
+      &__gradient{
+         display: block;
+      }
+      &__row{
+         height: 80px;
+         position: relative;
+         z-index: 2;
+      }
+      &__dropdown{
+         background: $bodyBackgroundPrimary;
+         position: fixed;
+         top: 80px;
+         left: 0;
+         width: 100vw;
+         max-height: calc(100vh - 80px);
+         z-index: 2;
+         // opacity: 0;
+         // will-change: opacity;
+         // pointer-events: none;
+         display: none;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: center;
+         overflow: hidden;
+         -ms-overflow-style: none;
+         scrollbar-width: none;
+         padding-left: $containerPadding;
+         padding-right: $containerPadding;
+         padding-top: 80px;
+         padding-bottom: 60px;
+         transition: 0.5s;
+         &::-webkit-scrollbar {
+            display: none;
+         }
+      }
+      &__logo{
+         height: 22px;
+      }
+      &__btn{
+         margin-left: auto;
+         margin-right: 10px;
+         padding: 10px 15px;
+         .btn__content{
+            font-weight: 600;
+         }
+      }
+      &__menu{
+         margin-bottom: 79px;
+         width: 100%;
+         ul{
+            display: block;
+         }
+         li{
+            margin-right: 0;
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 1.25rem;
+            &:last-of-type{
+               margin-bottom: 0;
+            }
+            &.current-menu-item{
+               a{
+                  border: none;
+               }
+            }
+         }
+      }
+      &__phone{
+         text-align: center;
+         a{
+            pointer-events: auto;
+         }
+      }
+      &__soc-item{
+         margin-left: 19px;
+         margin-right: 0;
+      }
+      &_active{
+         background: $bodyBackgroundPrimary;
+         .header{
+            &__toggler{
+               path{
+                  stroke: $bodyColorAccent;
+               }
+            }
+            &__dropdown{
+               // opacity: 1;
+               // pointer-events: auto;
+               display: flex;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 320px){
+   .header{
+      &__btn{
+         .btn__content{
+            font-size: 0.75rem;
+         }
+      }
+   }
+}

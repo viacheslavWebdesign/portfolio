@@ -1,0 +1,209 @@
+.about{
+   &__section{
+      padding-top: 43px;
+   }
+   &__title{
+      font-size: 5rem;
+      font-family: $fontSecondary;
+      font-weight: normal;
+      margin: 0 0 44px;
+      color: $colorPrimary;
+      animation: fadeInRight100 1s ease-in-out both;
+   }
+   &__row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   &__col{
+      width: 17.92%;
+      position: relative;
+      &:nth-of-type(3){
+         width: 20.68%;
+      }
+   }
+   &__img{
+      position: relative;
+      display: block;
+      margin: 0 0 20px;
+      box-shadow: 0px 3px 20px rgba(0,0,0,.1);
+      border-radius: 24px;
+      width: 100%;
+      &:last-of-type{
+         margin: 0;
+      }
+      &:after{
+         content: '';
+         display: block;
+         position: relative;
+      }
+      &_1{
+         padding-top: 101.02%;
+         animation: fadeInUp 1s ease-in-out both;
+      }
+      &_2{
+         padding-top: 66.66%;
+         animation: fadeInUp 1s ease-in-out both;
+         animation-delay: 0.25s;
+      }
+      &_3{
+         padding-top: 101.02%;
+         animation: fadeInUp 1s ease-in-out both;
+         animation-delay: 0.5s;
+      }
+      &_4{
+         padding-top: 190.66%;
+         animation: fadeInUp 1s ease-in-out both;
+         animation-delay: 0.75s;
+      }
+      &_5{
+         padding-top: 101.02%;
+         animation: fadeInUp 1s ease-in-out both;
+         animation-delay: 1s;
+      }
+      &_6{
+         padding-top: 66.66%;
+         animation: fadeInUp 1s ease-in-out both;
+         animation-delay: 1.25s;
+      }
+      &_7{
+         padding-top: 101.02%;
+         animation: fadeInUp 1s ease-in-out both;
+         animation-delay: 1.5s;
+      }
+   }
+   &__quote{
+      display: block;
+      position: absolute;
+      bottom: -25px;
+      transform: translateY(100%);
+      animation: fadeIn 1s ease-in-out both;
+      animation-delay: 1.75s;
+      svg{
+         height: 20px;
+         width: auto;
+         display: block;
+         margin-bottom: 24px;
+      }
+      p{
+         font-size: 0.875rem;
+         color: #000;
+         line-height: 1.571rem;
+      }
+   }
+   &__btn{
+      display: block;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      width: 116px;
+      position: absolute;
+      transform: translateY(-100%);
+      top: -35px;
+      left: 32px;
+      text-decoration: none;
+      animation: fadeIn 1s ease-in-out both;
+      animation-delay: 2s;
+      svg{
+         width: 100%;
+         height: auto;
+         display: block;
+         path{
+            &:first-of-type{
+               transition: $transition;
+               fill: $colorTertiary;
+            }
+         }
+      }
+      &:hover{
+         svg{
+            path{
+               &:first-of-type{
+                  fill: $colorFifth;
+               }
+            }
+         }
+      }
+   }
+   &__text{
+      text-align: center;
+      margin: 78px auto 0;
+      width: 100%;
+      max-width: 932px;
+      font-size: 1.375rem;
+      line-height: 1.545;
+      animation: fadeInUp100 1s ease-in-out both;
+      animation-delay: 2.25s;
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'lg')){
+   .about{
+      &__title{
+         font-size: 2.4rem;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'sm')){
+   .about{
+      &__section{
+         padding-top: 36px;
+      }
+      &__title{
+         font-size: 1.375rem;
+         margin-bottom: 24px;
+      }
+      &__row{
+         align-items: flex-start;
+         flex-wrap: wrap;
+      }
+      &__col{
+         display: none;
+         &:nth-of-type(1){
+            width: calc(50% - 9px);
+            display: block;
+         }
+         &:nth-of-type(2){
+            width: calc(50% - 9px);
+            display: block;
+         }
+      }
+      &__img{
+         margin-bottom: 14px;
+         &:last-of-type{
+            margin-bottom: 0;
+         }
+      }
+      &__quote{
+         position: relative;
+         transform: none;
+         bottom: 0;
+         margin: 9px 0 16px;
+      }
+      &__btn{
+         position: relative;
+         transform: none;
+         top: 0;
+         left: 0;
+         margin: 35px 0 0 24px;
+      }
+      &__text{
+         text-align: left;
+         font-size: 1.125rem;
+         margin-top: 30px;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'xs')){
+   .about{
+      &__btn{
+         margin-top: 65px;
+         margin-left: 10px;
+      }
+   }
+}

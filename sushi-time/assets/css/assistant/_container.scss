@@ -1,0 +1,25 @@
+@import 'var';
+
+.container{
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+   max-width: 1540px;
+   box-sizing: border-box;
+}
+
+@media only screen and (min-width: 993px){
+   .container{
+      padding-left: 30px;
+      padding-right: 30px;
+   }
+}
+
+@media only screen and (min-width: 1720px){
+   .container{
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+}

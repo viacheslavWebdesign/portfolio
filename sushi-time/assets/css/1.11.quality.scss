@@ -1,0 +1,101 @@
+.quality{
+   &__section{
+      // padding-bottom: 60px;
+      // padding-bottom: 30px;
+      padding-bottom: 15px;
+   }
+   &__row{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+   }
+   &__item{
+      position: relative;
+   }
+   &__image{
+      width: 100%;
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+      box-sizing: border-box;
+      &:after{
+         content: '';
+         padding-top: 72.46376811594203%;
+         display: block;
+         position: relative;
+      }
+      img{
+         display: block;
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+         transition: $transition;
+         object-fit: cover;
+      }
+   }
+   &__title{
+      border-color: #020202 !important;
+      background: #020202 !important;
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+      top: 20px;
+      left: 20px;
+      font-size: 0.813rem;
+      letter-spacing: -0.04em;
+      min-height: 36px;
+      padding: 11px 10px 7px;
+   }
+   &__pagination{
+      margin-top: 21px;
+      display: flex;
+      justify-content: center;
+   }
+}
+
+@media only screen and (min-width: 993px){
+   .quality{
+      &__section{
+         // padding-bottom: 120px;
+         // padding-top: 60px;
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }
+      &__row{
+         flex-direction: row;
+         flex-wrap: wrap;
+         gap: 20px;
+      }
+      &__col{
+         width: calc((100% - 40px) / 3);
+      }
+      &__title{
+         top: 30px;
+         left: 30px;
+      }
+      &__item{
+         cursor: pointer;
+         &:hover{
+            .quality{
+               &__image{
+                  img{
+                     transform: translate(-50%,-50%) scale(1.06);
+                  }
+               }
+            }
+         }
+      }
+      &__image{
+         img{
+            transition: $transition;
+         }
+      }
+      &__pagination{
+         margin-top: 40px;
+      }
+   }
+}

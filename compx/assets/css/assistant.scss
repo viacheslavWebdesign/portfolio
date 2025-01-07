@@ -1,0 +1,44 @@
+// @import 'var';  /** підключений в кожному файлі*/
+@import 'assistant/container';
+@import 'assistant/display';
+@import 'assistant/grid';
+@import 'assistant/flex';
+@import 'assistant/normalize';
+@import 'assistant/order';
+@import 'assistant/position';
+@import 'assistant/spacing';
+@import 'assistant/text';
+@import 'assistant/bg';
+
+html{
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+    width: 100%;
+    font-size: 100%;
+ }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    &:before, &:after{
+       box-sizing: inherit;
+    }
+ }
+
+ button, input, textarea, select{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background: none;
+    text-decoration: none;
+    border-radius: 0px;
+    &:active, &:focus, &:hover{
+       outline: none;
+       box-shadow: none;
+       border: none;
+       background: none;
+       text-decoration: none;
+    }
+ }
+

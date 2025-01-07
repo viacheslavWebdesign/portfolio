@@ -1,0 +1,339 @@
+.about{
+   &__section{
+      padding: 84px 0 92px;
+   }
+   &__title{
+      margin: 84px 0 37px;
+   }
+   &__divider{
+      border: none;
+      border-top: solid 1px #939392;
+      margin-top: 0;
+      margin-bottom: 37px;
+   }
+   &__text{
+      margin-top: 37px;
+   }
+}
+
+@media (min-width: 576px){
+   .reviews__section_about{
+      padding-bottom: 50px;
+   }
+}
+
+@media (max-width: 576px){
+   .about{
+      &__section{
+         padding: 27px 0 35px;
+      }
+      &__title{
+         margin: 21px 0 21px;
+      }
+      &__divider{
+         margin-bottom: 21px;
+      }
+      &__text{
+         margin-top: 21px;
+         font-size: 0.875rem;
+      }
+   }
+}
+
+
+
+.team{
+   &__section{
+      padding: 89px 0 84px;
+   }
+   &__title{
+      margin-top: 12px;
+      margin-bottom: 46px;
+   }
+   &__row{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 76px;
+   }
+   &__col{
+      width: calc((100% - 63px) / 2);
+      margin-right: 63px;
+      margin-bottom: 24px;
+      &:nth-of-type(even){
+         margin-right: 0;
+      }
+      &:nth-last-of-type(1), &:nth-last-of-type(2){
+         margin-bottom: 0;
+      }
+   }
+   &__divider{
+      margin-top: 0;
+      margin-bottom: 30px;
+      border: none;
+      border-top: 1px solid #8D8D8D;
+   }
+   &__heading{
+      display: flex;
+   }
+   &__avatar{
+      height: 195px;
+      width: 195px;
+      border-radius: 50%;
+      border: solid 2px $bodyBackgroundAccent;
+      flex-shrink: none;
+   }
+   &__info{
+      padding-top: 24px;
+      padding-left: 68px;
+      flex: 1;
+   }
+   &__name{
+      font-size: 2.188rem;
+      margin-bottom: 16px;
+   }
+   &__position{
+      color: #767676;
+   }
+   &__stats{
+      display: flex;
+      padding-top: 30px;
+   }
+   &__stats-item{
+      width: calc((100% - 20px) / 3);
+      margin-right: 10px;
+      border-top: 1px solid #8D8D8D;
+      padding-top: 15px;
+      &:nth-of-type(3n+3){
+         margin-right: 0;
+      }
+   }
+   &__stats-title{
+      color: #767676;
+      margin-bottom: 19px;
+   }
+   &__stats-text{
+      font-size: 2.5rem;
+   }
+   &__details{
+      color: #474747;
+      margin-top: 24px;
+   }
+}
+
+@media (max-width: 576px){
+   .team{
+      &__title{
+         margin-top: 5px;
+         margin-bottom: 13px;
+      }
+      &__section{
+         padding: 53px 0 65px;
+      }
+      &__row{
+         display: block;
+         margin-bottom: 40px;
+      }
+      &__col{
+         width: 100%;
+         margin-right: 0;
+         &:nth-last-of-type(2){
+            margin-bottom: 24px;
+         }
+      }
+      &__divider{
+         margin-bottom: 21px;
+      }
+      &__avatar{
+         width: 121px;
+         height: 121px;
+      }
+      &__info{
+         padding-top: 5px;
+         padding-left: 30px;
+      }
+      &__name{
+         font-size: 1.563rem;
+         margin-bottom: 8px;
+      }
+      &__position{
+         font-size: 0.938rem;
+      }
+      &__stats{
+         padding-top: 23px;
+      }
+      &__stats-item{
+         width: calc((100% - 34px) / 2);
+         margin-right: 34px;
+         &:last-of-type{
+            display: none;
+         }
+         &:nth-of-type(2){
+            margin-right: 0;
+         }
+      }
+      &__stats-title{
+         font-size: 0.75rem;
+         margin-bottom: 13px;
+      }
+      &__details{
+         margin-top: 15px;
+      }
+   }
+}
+
+
+.production{
+   &__section{
+      padding: 107px 0 51px;
+   }
+   &__title{
+      margin-top: 12px;
+      margin-bottom: 30px;
+   }
+   &__divider{
+      border: none;
+      margin: 0;
+      border-top: solid 1px #6E6E6E;
+   }
+   &__subtitle{
+      margin: 30px 0 42px;
+   }
+   &__slider{
+      &:not(.slick-initialized){
+         .production{
+            &__slider-item{
+               display: none;
+               &:first-of-type{
+                  display: block;
+               }
+            }
+         }
+      }
+      .slick-prev{
+         background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' fill='none'%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' stroke='%23fff' stroke-width='2' transform='rotate(180 24.5 24.5)'/%3E%3Cpath fill='%23fff' d='M14.293 23.293a1 1 0 0 0 0 1.414l6.364 6.364a1 1 0 0 0 1.414-1.414L16.414 24l5.657-5.657a1 1 0 0 0-1.414-1.414l-6.364 6.364ZM35 23H15v2h20v-2Z'/%3E%3C/svg%3E") no-repeat center / contain;
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         left: 50px;
+         color: rgba(0,0,0,0);
+         font-size: 0;
+         line-height: 0;
+         width: 49px;
+         height: 49px;
+         z-index: 5;
+         transition: $transition;
+         &:hover{
+            opacity: 0.5;
+         }
+      }
+      .slick-next{
+         background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' fill='none'%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' stroke='%23fff' stroke-width='2'/%3E%3Cpath fill='%23fff' d='M34.707 25.707a1 1 0 0 0 0-1.414l-6.364-6.364a1 1 0 0 0-1.414 1.414L32.586 25l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM14 26h20v-2H14v2Z'/%3E%3C/svg%3E") no-repeat center / contain;
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         right: 50px;
+         color: rgba(0,0,0,0);
+         font-size: 0;
+         line-height: 0;
+         width: 49px;
+         height: 49px;
+         z-index: 5;
+         transition: $transition;
+         &:hover{
+            opacity: 0.5;
+         }
+      }
+      .slick-dots{
+         position: absolute;
+         transform: translateX(-50%);
+         left: 50%;
+         bottom: 38px;
+         display: flex;
+         align-items: center;
+         li{
+            display: block;
+            margin-right: 10px;
+            &:last-of-type{
+               margin-right: 0;
+            }
+            &.slick-active{
+               button{
+                  background: none;
+               }
+            }
+         }
+         button{
+            outline: none;
+            border: 1px solid $bodyBackgroundPrimary;
+            box-shadow: none;
+            background: $bodyBackgroundPrimary;
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+         }
+      }
+   }
+   &__slider-item{
+      outline: none;
+      box-shadow: none;
+      border: none;
+      figure{
+         width: 100%;
+         position: relative;
+         display: block;
+         margin: 0;
+         &:after{
+            content: '';
+            display: block;
+            padding-top: 50.67024128686327%;
+            position: relative;
+         }
+      }
+   }
+}
+
+@media (max-width: 576px){
+   .production{
+      &__section{
+         padding: 53px 0 27px;
+      }
+      &__title{
+         margin-top: 5px;
+         margin-bottom: 28px;
+      }
+      &__divider{
+         display: none;
+      }
+      &__subtitle{
+         margin: 0 0 28px;
+      }
+      &__slider{
+         width: 100vw;
+         margin-left: -15px;
+         margin-bottom: 0px;
+         .slick-prev{
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='26' fill='none'%3E%3Cpath stroke='%23fff' stroke-width='2' d='M10 1 2 13l8 12'/%3E%3C/svg%3E") no-repeat center / contain;
+            left: 20px;
+            width: 24px;
+            height: 24px;
+         }
+         .slick-next{
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='26' fill='none'%3E%3Cpath stroke='%23fff' stroke-width='2' d='m1 25 8-12L1 1'/%3E%3C/svg%3E") no-repeat center / contain;
+            right: 20px;
+            width: 24px;
+            height: 24px;
+         }
+         .slick-dots{
+            position: relative;
+            left: 0;
+            top: 0;
+            transform: none;
+            justify-content: center;
+            margin: 28px auto 0;
+         }
+      }
+   }
+}

@@ -1,0 +1,321 @@
+.expert{
+   &__section{
+      padding: 105px 0 108px;
+      background: $bodyBackgroundSecondary;
+   }
+   &__breadcrumbs{
+      margin-bottom: 58px;
+   }
+   &__title{
+      margin: 0 0 20px;
+   }
+   &__subtitle{
+      color: #7A7A79;
+      margin-bottom: 26px;
+   }
+   &__divider{
+      border: none;
+      border-top: 1px solid #939392;
+      margin: 0 0 43px;
+   }
+   &__row{
+      display: flex;
+      margin-bottom: 54px;
+   }
+   &__avatar{
+      width: 473px;
+      height: 468px;
+      margin: 0 39px 0 0;
+   }
+   &__content{
+      flex: 1;
+   }
+   &__position{
+      margin: 0 0 18px;
+   }
+   &__stats{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -18px;
+      width: 100%;
+      max-width: 372px;
+      margin-bottom: 29px;
+   }
+   &__stats-item{
+      margin-top: 18px;
+      width: calc(50% - 16px);
+      margin-right: 32px;
+      padding-top: 15px;
+      border-top: 1px solid #939392;
+      &:nth-of-type(even){
+         margin-right: 0;
+      }
+   }
+   &__stats-name{
+      color: #7A7A79;
+   }
+   &__stats-num{
+      font-size: 2.5rem;
+      margin-top: 19px;
+   }
+   &__text{
+      font-size: 1.25rem;
+      margin-bottom: 18px;
+      &_second{
+         margin-bottom: 15px;
+      }
+   }
+   &__branches{
+      list-style: none;
+      margin-top: -18px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 372px;
+   }
+   &__branch{
+      position: relative;
+      margin-top: 18px;
+      padding-top: 17px;
+      border-top: 1px solid #939392;
+      width: calc(50% - 16px);
+      margin-right: 32px;
+      padding-left: 15px;
+      &:nth-of-type(even){
+         margin-right: 0;
+      }
+      &:before{
+          content: '';
+          position: absolute;
+          top: 23px;
+          left: 0;
+          height: 6px;
+          width: 6px;
+          background: $bodyBackgroundAccent;
+          border-radius: 50%;
+      }
+   }
+   &__soc{
+      display: flex;
+      a{
+         text-decoration: none;
+         display: block;
+         margin-right: 15px;
+         transition: $transition;
+         &:last-of-type{
+            margin-right: 0;
+         }
+         &:hover{
+            opacity: 0.5;
+         }
+      }
+      img{
+         height: 42px;
+         width: 42px;
+         display: block;
+         margin: 0;
+      }
+   }
+   &__description{
+      p{
+         margin-bottom: 23px;
+         letter-spacing: 0.05em;
+         &:last-of-type{
+            margin-bottom: 0;
+         }
+      }
+   }
+}
+
+@media (max-width: 576px){
+   .expert{
+      &__section{
+         padding: 27px 0 56px;
+         background: $bodyBackgroundPrimary;
+      }
+      &__breadcrumbs{
+         margin-bottom: 21px;
+      }
+      &__title{
+         margin: 0 0 9px;
+      }
+      &__subtitle{
+         margin-bottom: 27px;
+      }
+      &__divider{
+         display: none;
+      }
+      &__row{
+         display: block;
+         margin-bottom: 44px;
+      }
+      &__avatar{
+         width: 100vw;
+         height: auto;
+         position: relative;
+         display: block;
+         margin-left: -15px;
+         margin-right: 0;
+         margin-bottom: 31px;
+         &:after{
+            content: '';
+            display: block;
+            position: relative;
+            padding-top: 93.589743589744%;
+         }
+      }
+      &__stats{
+         max-width: 100%;
+         margin-bottom: 39px;
+      }
+      &__stats-item{
+         width: calc((100% - 29px) / 2);
+         margin-right: 29px;
+         padding-top: 12px;
+         &:nth-of-type(even){
+            margin-right: 0;
+         }
+      }
+      &__stats-name{
+         font-size: 0.75rem;
+         min-height: 29px;
+      }
+      &__stats-num{
+         margin-top: 27px;
+      }
+      &__text{
+         max-width: 300px;
+         margin-bottom: 19px;
+         &_second{
+            margin-bottom: 15px;
+         }
+      }
+      &__branches{
+         max-width: 100%;
+      }
+      &__branch{
+         width: calc((100% - 29px) / 2);
+         margin-right: 29px;
+         padding-top: 13px;
+         margin-top: 13px;
+         font-size: 0.875rem;
+         &:nth-of-type(even){
+            margin-right: 0;
+         }
+         &:before{
+            top: 18px;
+         }
+      }
+      &__description{
+         p{
+            margin-bottom: 15px;
+            &:last-of-type{
+               margin-bottom: 0;
+            }
+         }
+      }
+   }
+}
+
+.certificates{
+   &__section{
+      padding-bottom: 64px;
+      background: $bodyBackgroundSecondary;
+   }
+   &__pretitle{
+      margin-bottom: 15px;
+   }
+   &__title{
+      margin-top: 0;
+      margin-bottom: 40px;
+   }
+   &__slider{
+      &:not(.slick-initialized){
+         display: flex;
+         .certificates{
+            &__slide{
+               width: calc((100% - 60px) / 3);
+               margin-right: 30px;
+               &:nth-of-type(3){
+                  margin-right: 0;
+               }
+               display: none;
+               &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3){
+                  display: block;
+               }
+            }
+         }
+      }
+      .slick-dots{
+         position: relative;
+         margin-top: 64px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         li{
+            display: block;
+            margin-right: 10px;
+            &:last-of-type{
+               margin-right: 0;
+            }
+            &.slick-active{
+               button{
+                  background: none;
+               }
+            }
+         }
+         button{
+            outline: none;
+            border: 1px solid $bodyBackgroundAccent;
+            box-shadow: none;
+            background: $bodyBackgroundAccent;
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+         }
+      }
+      &.slick-initialized{
+         .slick-slide{
+            margin: 0 15px;
+        }
+        .slick-list{
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+      }
+   }
+   &__slide{
+      outline: none;
+      box-shadow: none;
+      border: none;
+      img{
+         width: 100%;
+         height: auto;
+         display: block;
+      }
+   }
+}
+
+@media (max-width: 576px){
+   .certificates{
+      &__section{
+         padding-bottom: 34px;
+         background: $bodyBackgroundPrimary;
+      }
+      &__pretitle{
+         margin-bottom: 5px;
+      }
+      &__title{
+         margin-bottom: 20px;
+      }
+      &__slider{
+         .slick-dots{
+            margin-top: 20px;
+         }
+      }
+   }
+}

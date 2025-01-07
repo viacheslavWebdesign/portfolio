@@ -1,0 +1,45 @@
+@import 'var';
+
+.container{
+   box-sizing: border-box;
+   width: 100%;
+   padding: 0 200px;
+}
+
+.inner-container{
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+   max-width: 1000px;
+   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1920px){
+   .container{
+      padding: 0 150px;
+   }
+}
+
+@media only screen and (max-width: 1600px){
+   .container{
+      padding: 0 60px;
+   }
+}
+
+@media only screen and (max-width: 1400px){
+   .container{
+      padding: 0 40px;
+   }
+}
+
+@media only screen and (max-width: 992px){
+   .container{
+      padding: 0 60px;
+   }
+}
+
+@media only screen and (max-width: 576px){
+   .container{
+      padding: 0 26px;
+   }
+}

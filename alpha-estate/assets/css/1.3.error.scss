@@ -1,0 +1,51 @@
+.error{
+   &__section{
+      padding: 160px 0 250px;
+   }
+   &__image{
+      height: 225px;
+      width: auto;
+      display: block;
+      margin: 0 auto 46px;
+   }
+   &__title{
+      text-align: center;
+      margin-bottom: 30px;
+   }
+   &__text{
+      text-align: center;
+      max-width: 450px;
+      margin: 0 auto 50px;
+   }
+   &__bottom{
+      display: flex;
+      justify-content: center;
+   }
+}
+
+@media only screen and (max-width: 1200px){
+   .error{
+      &__section{
+         padding: 110px 0;
+      }
+   }
+}
+
+@media only screen and (max-width: 576px){
+   .error{
+      &__section{
+         padding: 55px 0;
+      }
+      &__image{
+         height: 124px;
+      }
+   }
+}
+
+@media only screen and (max-width: 320px){
+   .error{
+      &__image{
+         height: 101px;
+      }
+   }
+}

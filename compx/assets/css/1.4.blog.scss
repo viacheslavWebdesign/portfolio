@@ -1,0 +1,105 @@
+.blog{
+   &__categories{
+      border: solid 1px #F0F0F0;
+   }
+   &__categories-list{
+      list-style: none;
+   }
+   &__categories-item{
+      border-bottom: solid 1px #F0F0F0;
+      position: relative;
+      &:last-of-type{
+         border-bottom: none;
+      }
+      a{
+         text-decoration: none;
+         display: block;
+         color: $bodyColorPrimary;
+         font-weight: 500;
+         font-size: 1.125rem;
+         padding: 15px 10px 15px 19px;
+      }
+      &_current{
+         border-left: solid 2px #06B071;
+         a{
+            color: #06B071;
+         }
+      }
+   }
+   &-item{
+      text-decoration: none;
+      display: block;
+      &__image{
+         width: 100%;
+         position: relative;
+         display: block;
+         &:after{
+            content: '';
+            display: block;
+            position: relative;
+            padding-top: 80.27777777777779%;
+         }
+      }
+      &__body{
+         padding: 10px 9px 14px 13px;
+         border-left: solid 1px $bodyBorderColorPrimary;
+         border-right: solid 1px $bodyBorderColorPrimary;
+         border-bottom: solid 1px $bodyBorderColorPrimary;
+      }
+      &__date{
+         font-size: 0.75rem;
+         color: $bodyColorPrimary;
+      }
+      &__title{
+         font-weight: 500;
+         color: $bodyColorPrimary;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 3;
+         -webkit-box-orient: vertical;
+         min-height: 66px;
+      }
+   }
+}
+
+@media (max-width: map_get($adaptive-breakpoints, 'xxl')){
+   .blog{
+      &-item{
+         &__image{
+            &:after{
+               padding-top: 81.11111111111111%;
+            }
+         }
+         &__body{
+            padding: 6px 15px 5px 12px;
+         }
+         &__title{
+            font-size: 0.875rem;
+            -webkit-line-clamp: 2;
+            min-height: 39px;
+         }
+      }
+   }
+}
+@media (max-width: map_get($adaptive-breakpoints, 'xl')){
+
+}
+@media (max-width: map_get($adaptive-breakpoints, 'lg')){
+   .blog{
+      &__categories{
+         display: none;
+      }
+      &-item{
+         &__body{
+            padding: 3px 15px 5px;
+         }
+      }
+   }
+}
+@media (max-width: map_get($adaptive-breakpoints, 'sm')){
+
+}
+@media (max-width: map_get($adaptive-breakpoints, 'xs')){
+
+}
